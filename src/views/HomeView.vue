@@ -4,8 +4,9 @@ import type { ElButton } from 'element-plus';
 
 <template>
   <main>
-    <ElButton type="primary">
+    <ElButton class="mt-6 !micro-build-text-r" type="primary">
       首页
     </ElButton>
+    <div class="pt-6 micro-build-text-r">不用！引入!important</div>
   </main>
 </template>
