@@ -10,16 +10,16 @@ export const constantRoutes = [
       hidden: true
     }
   },
-  // {
-  //   path: '/login',
-  //   component: () => import('@/views/Login/Login.vue'),
-  //   name: 'Login',
-  //   meta: {
-  //     hidden: true,
-  //     title: '登录',
-  //     noTagsView: true
-  //   }
-  // }
+  {
+    path: '/login',
+    component: () => import('@/views/Login/Login.vue'),
+    name: 'Login',
+    meta: {
+      hidden: true,
+      title: '登录',
+      noTagsView: true
+    }
+  }
 ]
 
 const router = createRouter({

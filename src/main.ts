@@ -1,17 +1,17 @@
-import './assets/main.css'
+import '@/styles/index.less'
 import 'virtual:uno.css'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import ElementPlus from 'element-plus'
 
+import { setupStore } from '@/stores'
 import App from './App.vue'
 import router from './router'
+import { setupElementPlus } from '@/plugins/elementPlus'
 
 const app = createApp(App)
 
-app.use(createPinia())
+setupStore(app)
+setupElementPlus(app)
 app.use(router)
-app.use(ElementPlus, { size: 'small', zIndex: 3000 })
 
 app.mount('#app')
