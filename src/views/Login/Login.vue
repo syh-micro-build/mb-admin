@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import LoginForm from './components/LoginForm.vue'
-// import RegisterForm from './components/Registerform.vue'
+import RegisterForm from './components/RegisterForm.vue'
 import { ref } from 'vue'
 import { ElScrollbar } from 'element-plus'
 
@@ -64,11 +64,11 @@ const toLogin = () => {
                 class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:light:bg-white"
                 @to-register="toRegister"
               />
-              <!-- <RegisterForm
+              <RegisterForm
                 v-else
                 class="p-20px h-auto m-auto lt-xl:rounded-3xl lt-xl:light:bg-white"
                 @to-login="toLogin"
-              /> -->
+              />
             </div>
           </Transition>
         </div>

@@ -1,9 +1,8 @@
 <script setup lang="tsx">
-import { Form, FormSchema } from '@/components/Form'
+import { Form, type FormSchema } from '@/components/Form'
 import { reactive, ref } from 'vue'
-import { useI18n } from '@/hooks/web/useI18n'
 import { useForm } from '@/hooks/web/useForm'
-import { ElInput, FormRules } from 'element-plus'
+import { ElInput, type FormRules } from 'element-plus'
 import { useValidator } from '@/hooks/web/useValidator'
 import { BaseButton } from '@/components/Button'
 
@@ -11,8 +10,6 @@ const emit = defineEmits(['to-login'])
 
 const { formRegister, formMethods } = useForm()
 const { getElFormExpose } = formMethods
-
-const { t } = useI18n()
 
 const { required } = useValidator()
 
@@ -25,26 +22,26 @@ const schema = reactive<FormSchema[]>([
     formItemProps: {
       slots: {
         default: () => {
-          return <h2 class="text-2xl font-bold text-center w-[100%]">{t('login.register')}</h2>
+          return <h2 class="text-2xl font-bold text-center w-[100%]">注册</h2>
         }
       }
     }
   },
   {
     field: 'username',
-    label: t('login.username'),
+    label: '用户名',
     value: '',
     component: 'Input',
     colProps: {
       span: 24
     },
     componentProps: {
-      placeholder: t('login.usernamePlaceholder')
+      placeholder: '请输入用户名'
     }
   },
   {
     field: 'password',
-    label: t('login.password'),
+    label: '密码',
     value: '',
     component: 'InputPassword',
     colProps: {
@@ -55,12 +52,12 @@ const schema = reactive<FormSchema[]>([
         width: '100%'
       },
       strength: true,
-      placeholder: t('login.passwordPlaceholder')
+      placeholder: '请输入密码'
     }
   },
   {
     field: 'check_password',
-    label: t('login.checkPassword'),
+    label: '确认密码',
     value: '',
     component: 'InputPassword',
     colProps: {
@@ -71,12 +68,12 @@ const schema = reactive<FormSchema[]>([
         width: '100%'
       },
       strength: true,
-      placeholder: t('login.passwordPlaceholder')
+      placeholder: '请输入密码'
     }
   },
   {
     field: 'code',
-    label: t('login.code'),
+    label: '验证码',
     colProps: {
       span: 24
     },
@@ -85,7 +82,7 @@ const schema = reactive<FormSchema[]>([
         default: (formData) => {
           return (
             <div class="w-[100%] flex">
-              <ElInput v-model={formData.code} placeholder={t('login.codePlaceholder')} />
+              <ElInput v-model={formData.code} placeholder='请输入验证码' />
             </div>
           )
         }
@@ -109,12 +106,12 @@ const schema = reactive<FormSchema[]>([
                   loading={loading.value}
                   onClick={loginRegister}
                 >
-                  {t('login.register')}
+                  注册
                 </BaseButton>
               </div>
               <div class="w-[100%] mt-15px">
                 <BaseButton class="w-[100%]" onClick={toLogin}>
-                  {t('login.hasUser')}
+                  已有账号？去登录
                 </BaseButton>
               </div>
             </>
