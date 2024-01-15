@@ -3,26 +3,26 @@ import { reactive, ref, watch, onMounted, unref } from 'vue'
 import { Form, type FormSchema } from '@/components/Form'
 import { ElCheckbox, ElLink } from 'element-plus'
 import { useForm } from '@/hooks/web/useForm'
-// import { loginApi, getTestRoleApi, getAdminRoleApi } from '@/api/login'
+import { loginApi, getTestRoleApi, getAdminRoleApi } from '@/api/login'
 import { useAppStore } from '@/stores/app'
-// import { usePermissionStore } from '@/store/modules/permission'
+import { usePermissionStore } from '@/stores/permission'
 import { useRouter } from 'vue-router'
 import type { RouteLocationNormalizedLoaded, RouteRecordRaw } from 'vue-router'
-// import { UserType } from '@/api/login/types'
+import type { UserType } from '@/api/login/types'
 import { useValidator } from '@/hooks/web/useValidator'
 import { Icon } from '@/components/Icon'
-// import { useUserStore } from '@/store/modules/user'
+import { useUserStore } from '@/stores/user'
 import { BaseButton } from '@/components/Button'
 
 const { required } = useValidator()
 
 const emit = defineEmits(['to-register'])
 
-// const appStore = useAppStore()
+const appStore = useAppStore()
 
-// const userStore = useUserStore()
+const userStore = useUserStore()
 
-// const permissionStore = usePermissionStore()
+const permissionStore = usePermissionStore()
 
 const { currentRoute, addRoute, push } = useRouter()
 
@@ -183,12 +183,10 @@ const schema = reactive<FormSchema[]>([
 
 const iconSize = 30
 
-// const remember = ref(userStore.getRememberMe)
-const remember = ref(true)
+const remember = ref(userStore.getRememberMe)
 
 const initLoginInfo = () => {
-  // const loginInfo = userStore.getLoginInfo
-  const loginInfo = undefined
+  const loginInfo = userStore.getLoginInfo
   if (loginInfo) {
     const { username, password } = loginInfo
     setValues({ username, password })
@@ -221,69 +219,69 @@ watch(
 
 // 登录
 const signIn = async () => {
-  // const formRef = await getElFormExpose()
-  // await formRef?.validate(async (isValid) => {
-  //   if (isValid) {
-  //     loading.value = true
-  //     const formData = await getFormData<UserType>()
+  const formRef = await getElFormExpose()
+  await formRef?.validate(async (isValid) => {
+    if (isValid) {
+      loading.value = true
+      const formData = await getFormData<UserType>()
 
-  //     try {
-  //       const res = await loginApi(formData)
+      try {
+        const res = await loginApi(formData)
 
-  //       if (res) {
-  //         // 是否记住我
-  //         if (unref(remember)) {
-  //           userStore.setLoginInfo({
-  //             username: formData.username,
-  //             password: formData.password
-  //           })
-  //         } else {
-  //           userStore.setLoginInfo(undefined)
-  //         }
-  //         userStore.setRememberMe(unref(remember))
-  //         userStore.setUserInfo(res.data)
-  //         // 是否使用动态路由
-  //         if (appStore.getDynamicRouter) {
-  //           getRole()
-  //         } else {
-  //           await permissionStore.generateRoutes('static').catch(() => {})
-  //           permissionStore.getAddRouters.forEach((route) => {
-  //             addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
-  //           })
-  //           permissionStore.setIsAddRouters(true)
-  //           push({ path: redirect.value || permissionStore.addRouters[0].path })
-  //         }
-  //       }
-  //     } finally {
-  //       loading.value = false
-  //     }
-  //   }
-  // })
+        if (res) {
+          // 是否记住我
+          if (unref(remember)) {
+            userStore.setLoginInfo({
+              username: formData.username,
+              password: formData.password
+            })
+          } else {
+            userStore.setLoginInfo(undefined)
+          }
+          userStore.setRememberMe(unref(remember))
+          userStore.setUserInfo(res.data)
+          // 是否使用动态路由
+          if (appStore.getDynamicRouter) {
+            getRole()
+          } else {
+            await permissionStore.generateRoutes('static').catch(() => {})
+            permissionStore.getAddRouters.forEach((route) => {
+              addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
+            })
+            permissionStore.setIsAddRouters(true)
+            push({ path: redirect.value || permissionStore.addRouters[0].path })
+          }
+        }
+      } finally {
+        loading.value = false
+      }
+    }
+  })
 }
 
 // 获取角色信息
 const getRole = async () => {
-  // const formData = await getFormData<UserType>()
-  // const params = {
-  //   roleName: formData.username
-  // }
-  // const res =
-  //   appStore.getDynamicRouter && appStore.getServerDynamicRouter
-  //     ? await getAdminRoleApi(params)
-  //     : await getTestRoleApi(params)
-  // if (res) {
-  //   const routers = res.data || []
-  //   userStore.setRoleRouters(routers)
-  //   appStore.getDynamicRouter && appStore.getServerDynamicRouter
-  //     ? await permissionStore.generateRoutes('server', routers).catch(() => {})
-  //     : await permissionStore.generateRoutes('frontEnd', routers).catch(() => {})
+  const formData = await getFormData<UserType>()
+  const params = {
+    roleName: formData.username
+  }
+  const res =
+    appStore.getDynamicRouter && appStore.getServerDynamicRouter
+      ? await getAdminRoleApi(params)
+      : await getTestRoleApi(params)
+  if (res) {
+    const routers = res.data || []
+    userStore.setRoleRouters(routers)
+    appStore.getDynamicRouter && appStore.getServerDynamicRouter
+      ? await permissionStore.generateRoutes('server', routers).catch(() => {})
+      : await permissionStore.generateRoutes('frontEnd', routers).catch(() => {})
 
-  //   permissionStore.getAddRouters.forEach((route) => {
-  //     addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
-  //   })
-  //   permissionStore.setIsAddRouters(true)
-  //   push({ path: redirect.value || permissionStore.addRouters[0].path })
-  // }
+    permissionStore.getAddRouters.forEach((route) => {
+      addRoute(route as RouteRecordRaw) // 动态添加可访问路由表
+    })
+    permissionStore.setIsAddRouters(true)
+    push({ path: redirect.value || permissionStore.addRouters[0].path })
+  }
 }
 
 // 去注册页面
