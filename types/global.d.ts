@@ -8,8 +8,13 @@ declare global {
   declare type ElRef<T extends HTMLElement = HTMLDivElement> = Nullable<T>
   declare type Recordable<T = any, K = string> = Record<K extends null | undefined ? string : K, T>
   declare type ComponentRef<T> = InstanceType<T>
+
+  declare type TimeoutHandle = ReturnType<typeof setTimeout>
+  declare type IntervalHandle = ReturnType<typeof setInterval>
+
   declare type ElementPlusInfoType = 'success' | 'info' | 'warning' | 'danger'
   declare type LayoutType = 'classic' | 'topLeft' | 'top' | 'cutMenu'
+
   declare type AxiosContentType =
   | 'application/json'
   | 'application/x-www-form-urlencoded'
@@ -30,6 +35,7 @@ declare global {
     code: number
     data: T extends any ? T : T & any
   }
+  
   declare interface ThemeTypes {
     elColorPrimary?: string
     leftMenuBorderColor?: string
