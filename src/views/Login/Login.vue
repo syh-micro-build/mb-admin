@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import LoginForm from './components/LoginForm.vue'
 import RegisterForm from './components/RegisterForm.vue'
-import { ref } from 'vue'
+import { ThemeSwitch } from '@/components/ThemeSwitch'
+import { computed, ref } from 'vue'
 import { ElScrollbar } from 'element-plus'
+import { useAppStore } from '@/stores/app'
+import { getCssVar } from '@/utils'
+
+const appStore = useAppStore()
+
+const title = computed(() => appStore.getTitle)
 
 const isLogin = ref(true)
 
@@ -12,6 +19,12 @@ const toRegister = () => {
 
 const toLogin = () => {
   isLogin.value = true
+}
+
+const themeChange = () => {
+  const color = getCssVar('--el-bg-color')
+  appStore.setMenuTheme(color)
+  appStore.setHeaderTheme(color)
 }
 </script>
 
@@ -26,7 +39,7 @@ const toLogin = () => {
         >
           <div class="flex items-center relative text-white">
             <img src="@/assets/imgs/logo.png" alt="" class="w-48px h-48px mr-10px" />
-            <span class="text-20px font-bold">MicroBuildAdmin</span>
+            <span class="text-20px font-bold">{{ title }}</span>
           </div>
           <div class="flex justify-center items-center h-[calc(100%-60px)]">
             <TransitionGroup
@@ -48,11 +61,11 @@ const toLogin = () => {
           >
             <div class="flex items-center at-2xl:hidden at-xl:hidden">
               <img src="@/assets/imgs/logo.png" alt="" class="w-48px h-48px mr-10px" />
-              <span class="text-20px font-bold">MicroBuildAdmin</span>
+              <span class="text-20px font-bold">{{ title }}</span>
             </div>
 
             <div class="flex justify-end items-center space-x-10px">
-              帮助
+              <ThemeSwitch @change="themeChange" />
             </div>
           </div>
           <Transition appear enter-active-class="animate__animated animate__bounceInRight">
