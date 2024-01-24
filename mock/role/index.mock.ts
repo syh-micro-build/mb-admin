@@ -37,14 +37,50 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/components',
+    component: '#',
+    redirect: '/components/form/default-form',
+    name: 'ComponentsDemo',
+    meta: {
+      title: '组件',
+      icon: 'bx:bxs-component',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'form',
+        component: '##',
+        name: 'Form',
+        meta: {
+          title: '表单',
+          alwaysShow: true
+        },
+        children: [
+          {
+            path: 'default-form',
+            component: 'views/Components/Form/DefaultForm',
+            name: 'DefaultForm',
+            meta: {
+              title: '全部示例'
+            }
+          },
+          {
+            path: 'use-form',
+            component: 'views/Components/Form/UseFormDemo',
+            name: 'UseForm',
+            meta: {
+              title: 'UseForm'
+            }
+          }
+        ]
+      }
+    ]
   }
 ]
 
-const testList: string[] = [
-  '/dashboard',
-  '/dashboard/analysis',
-  '/dashboard/workplace'
-]
+const testList: string[] = ['/dashboard', '/dashboard/analysis', '/dashboard/workplace']
 
 const List: any[] = []
 

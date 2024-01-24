@@ -17,10 +17,10 @@ export default defineConfig(({ command, mode }) => {
       vue(),
       vueJsx(),
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver()]
       }),
       Components({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver()]
       }),
       env.VITE_USE_MOCK === 'true'
         ? viteMockServe({
@@ -28,7 +28,7 @@ export default defineConfig(({ command, mode }) => {
             enable: !isBuild
           })
         : undefined,
-      UnoCSS(),
+      UnoCSS()
     ],
     resolve: {
       alias: {
@@ -36,10 +36,7 @@ export default defineConfig(({ command, mode }) => {
       }
     },
     optimizeDeps: {
-      include: [
-        'vue-types',
-        '@zxcvbn-ts/core',
-      ]
+      include: ['vue-types', '@zxcvbn-ts/core']
     }
   }
 })
