@@ -5,6 +5,7 @@ import { type ComponentSize, ElConfigProvider } from 'element-plus'
 import { useWindowSize } from '@vueuse/core'
 import { useAppStore } from '@/stores/app'
 import { setCssVar } from '@/utils'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 const appStore = useAppStore()
 
@@ -39,15 +40,10 @@ watch(
     immediate: true
   }
 )
-
 </script>
 
 <template>
-  <ElConfigProvider
-    namespace="el"
-    :message="{ max: 1 }"
-    :size="size"
-  >
+  <ElConfigProvider namespace="el" :message="{ max: 1 }" :size="size" :locale="zhCn">
     <slot></slot>
   </ElConfigProvider>
 </template>
