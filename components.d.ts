@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ActionButton: typeof import('./src/components/Search/src/components/ActionButton.vue')['default']
     Backtop: typeof import('./src/components/Backtop/src/Backtop.vue')['default']
     Breadcrumb: typeof import('./src/components/Breadcrumb/src/Breadcrumb.vue')['default']
     Button: typeof import('./src/components/Button/src/Button.vue')['default']
@@ -38,6 +39,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Screenfull: typeof import('./src/components/Screenfull/src/Screenfull.vue')['default']
+    Search: typeof import('./src/components/Search/src/Search.vue')['default']
     Setting: typeof import('./src/components/Setting/src/Setting.vue')['default']
     SizeDropdown: typeof import('./src/components/SizeDropdown/src/SizeDropdown.vue')['default']
     Table: typeof import('./src/components/Table/src/Table.vue')['default']

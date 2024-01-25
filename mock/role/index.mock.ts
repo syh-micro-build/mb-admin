@@ -135,6 +135,14 @@ const adminList = [
             }
           }
         ]
+      },
+      {
+        path: 'search',
+        component: 'views/Components/Search',
+        name: 'Search',
+        meta: {
+          title: '查询'
+        }
       }
     ]
   }
@@ -180,83 +188,6 @@ const menus = [
           meta: {
             title: '工作台',
             noCache: true
-          }
-        }
-      ]
-    },
-    {
-      path: '/level',
-      component: '#',
-      redirect: '/level/menu1/menu1-1/menu1-1-1',
-      name: 'Level',
-      status: Mock.Random.integer(0, 1),
-      id: 6,
-      meta: {
-        title: '菜单',
-        icon: 'carbon:skill-level-advanced'
-      },
-      children: [
-        {
-          path: 'menu1',
-          name: 'Menu1',
-          component: '##',
-          status: Mock.Random.integer(0, 1),
-          id: 7,
-          redirect: '/level/menu1/menu1-1/menu1-1-1',
-          meta: {
-            title: '菜单1'
-          },
-          children: [
-            {
-              path: 'menu1-1',
-              name: 'Menu11',
-              component: '##',
-              status: Mock.Random.integer(0, 1),
-              id: 8,
-              redirect: '/level/menu1/menu1-1/menu1-1-1',
-              meta: {
-                title: '菜单1-1',
-                alwaysShow: true
-              },
-              children: [
-                {
-                  path: 'menu1-1-1',
-                  name: 'Menu111',
-                  component: 'views/Level/Menu111',
-                  status: Mock.Random.integer(0, 1),
-                  id: 9,
-                  permission: ['edit', 'add', 'delete'],
-                  meta: {
-                    title: '菜单1-1-1',
-                    permission: ['edit', 'add', 'delete']
-                  }
-                }
-              ]
-            },
-            {
-              path: 'menu1-2',
-              name: 'Menu12',
-              component: 'views/Level/Menu12',
-              status: Mock.Random.integer(0, 1),
-              id: 10,
-              permission: ['edit', 'add', 'delete'],
-              meta: {
-                title: '菜单1-2',
-                permission: ['edit', 'add', 'delete']
-              }
-            }
-          ]
-        },
-        {
-          path: 'menu2',
-          name: 'Menu2Demo',
-          component: 'views/Level/Menu2',
-          status: Mock.Random.integer(0, 1),
-          id: 11,
-          permission: ['edit', 'add', 'delete'],
-          meta: {
-            title: '菜单2',
-            permission: ['edit', 'add', 'delete']
           }
         }
       ]
