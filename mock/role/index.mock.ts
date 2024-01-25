@@ -151,6 +151,14 @@ const adminList = [
         meta: {
           title: '描述'
         }
+      },
+      {
+        path: 'image-viewer',
+        component: 'views/Components/ImageViewer',
+        name: 'ImageViewer',
+        meta: {
+          title: '图片预览'
+        }
       }
     ]
   }
