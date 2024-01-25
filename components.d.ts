@@ -17,6 +17,7 @@ declare module 'vue' {
     ConfigGlobal: typeof import('./src/components/ConfigGlobal/src/ConfigGlobal.vue')['default']
     ContentWrap: typeof import('./src/components/ContentWrap/src/ContentWrap.vue')['default']
     ContextMenu: typeof import('./src/components/ContextMenu/src/ContextMenu.vue')['default']
+    Descriptions: typeof import('./src/components/Descriptions/src/Descriptions.vue')['default']
     Dialog: typeof import('./src/components/Dialog/src/Dialog.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     Footer: typeof import('./src/components/Footer/src/Footer.vue')['default']

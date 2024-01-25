@@ -143,6 +143,14 @@ const adminList = [
         meta: {
           title: '查询'
         }
+      },
+      {
+        path: 'descriptions',
+        component: 'views/Components/Descriptions',
+        name: 'Descriptions',
+        meta: {
+          title: '描述'
+        }
       }
     ]
   }
