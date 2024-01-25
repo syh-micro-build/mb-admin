@@ -12,6 +12,7 @@ declare module 'vue' {
     Button: typeof import('./src/components/Button/src/Button.vue')['default']
     Collapse: typeof import('./src/components/Collapse/src/Collapse.vue')['default']
     ColorRadioPicker: typeof import('./src/components/Setting/src/components/ColorRadioPicker.vue')['default']
+    ColumnSetting: typeof import('./src/components/Table/src/components/ColumnSetting.vue')['default']
     ConfigGlobal: typeof import('./src/components/ConfigGlobal/src/ConfigGlobal.vue')['default']
     ContentWrap: typeof import('./src/components/ContentWrap/src/ContentWrap.vue')['default']
     ContextMenu: typeof import('./src/components/ContextMenu/src/ContextMenu.vue')['default']
@@ -39,11 +40,18 @@ declare module 'vue' {
     Screenfull: typeof import('./src/components/Screenfull/src/Screenfull.vue')['default']
     Setting: typeof import('./src/components/Setting/src/Setting.vue')['default']
     SizeDropdown: typeof import('./src/components/SizeDropdown/src/SizeDropdown.vue')['default']
+    Table: typeof import('./src/components/Table/src/Table.vue')['default']
+    TableActions: typeof import('./src/components/Table/src/components/TableActions.vue')['default']
     TabMenu: typeof import('./src/components/TabMenu/src/TabMenu.vue')['default']
     TagsView: typeof import('./src/components/TagsView/src/TagsView.vue')['default']
     ThemeSwitch: typeof import('./src/components/ThemeSwitch/src/ThemeSwitch.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     UserInfo: typeof import('./src/components/UserInfo/src/UserInfo.vue')['default']
+    VideoPlayer: typeof import('./src/components/VideoPlayer/src/VideoPlayer.vue')['default']
+    VideoPlayerViewer: typeof import('./src/components/VideoPlayerViewer/src/VideoPlayerViewer.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
+  }
+  export interface ComponentCustomProperties {
+    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }
