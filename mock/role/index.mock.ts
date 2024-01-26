@@ -159,6 +159,14 @@ const adminList = [
         meta: {
           title: '图片预览'
         }
+      },
+      {
+        path: 'dialog',
+        component: 'views/Components/Dialog',
+        name: 'Dialog',
+        meta: {
+          title: '弹窗'
+        }
       }
     ]
   }
