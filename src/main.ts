@@ -1,5 +1,6 @@
 import '@/styles/index.less'
 import 'virtual:uno.css'
+import 'virtual:svg-icons-register'
 
 import { createApp } from 'vue'
 

@@ -167,6 +167,14 @@ const adminList = [
         meta: {
           title: '弹窗'
         }
+      },
+      {
+        path: 'icon',
+        component: 'views/Components/Icon',
+        name: 'Icon',
+        meta: {
+          title: '图标'
+        }
       }
     ]
   }

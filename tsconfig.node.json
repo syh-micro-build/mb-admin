@@ -11,10 +11,11 @@
     "composite": true,
     "noEmit": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "types": [
       "node",
-      "vite/client"
+      "vite/client",
+      "vite-plugin-svg-icons/client"
     ]
   }
 }
