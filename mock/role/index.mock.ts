@@ -191,6 +191,14 @@ const adminList = [
         meta: {
           title: '图表'
         }
+      },
+      {
+        path: 'count-to',
+        component: 'views/Components/CountTo',
+        name: 'CountTo',
+        meta: {
+          title: '数字动画'
+        }
       }
     ]
   }
