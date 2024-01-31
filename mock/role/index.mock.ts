@@ -175,6 +175,14 @@ const adminList = [
         meta: {
           title: '图标'
         }
+      },
+      {
+        path: 'icon-picker',
+        component: 'views/Components/IconPicker',
+        name: 'IconPicker',
+        meta: {
+          title: '图标选择器'
+        }
       }
     ]
   }
