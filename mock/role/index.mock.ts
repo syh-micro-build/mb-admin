@@ -183,6 +183,14 @@ const adminList = [
         meta: {
           title: '图标选择器'
         }
+      },
+      {
+        path: 'echart',
+        component: 'views/Components/Echart',
+        name: 'Echart',
+        meta: {
+          title: '图表'
+        }
       }
     ]
   }
