@@ -199,6 +199,14 @@ const adminList = [
         meta: {
           title: '数字动画'
         }
+      },
+      {
+        path: 'qrcode',
+        component: 'views/Components/Qrcode',
+        name: 'Qrcode',
+        meta: {
+          title: '二维码'
+        }
       }
     ]
   }
