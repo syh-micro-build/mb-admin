@@ -239,6 +239,14 @@ const adminList = [
         meta: {
           title: '瀑布流'
         }
+      },
+      {
+        path: 'image-cropping',
+        component: 'views/Components/ImageCropping',
+        name: 'ImageCropping',
+        meta: {
+          title: '图片裁剪'
+        }
       }
     ]
   }

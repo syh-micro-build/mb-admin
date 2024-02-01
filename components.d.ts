@@ -33,6 +33,7 @@ declare module 'vue' {
     IconPicker: typeof import('./src/components/IconPicker/src/IconPicker.vue')['default']
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
+    ImageCropping: typeof import('./src/components/ImageCropping/src/ImageCropping.vue')['default']
     ImageViewer: typeof import('./src/components/ImageViewer/src/ImageViewer.vue')['default']
     Infotip: typeof import('./src/components/Infotip/src/Infotip.vue')['default']
     InputPassword: typeof import('./src/components/InputPassword/src/InputPassword.vue')['default']
