@@ -215,6 +215,14 @@ const adminList = [
         meta: {
           title: '高亮'
         }
+      },
+      {
+        path: 'infotip',
+        component: 'views/Components/Infotip',
+        name: 'Infotip',
+        meta: {
+          title: '信息提示'
+        }
       }
     ]
   }
