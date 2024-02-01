@@ -247,6 +247,14 @@ const adminList = [
         meta: {
           title: '图片裁剪'
         }
+      },
+      {
+        path: 'video-player',
+        component: 'views/Components/VideoPlayer',
+        name: 'VideoPlayer',
+        meta: {
+          title: '视频播放器'
+        }
       }
     ]
   }
