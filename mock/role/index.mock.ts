@@ -207,6 +207,14 @@ const adminList = [
         meta: {
           title: '二维码'
         }
+      },
+      {
+        path: 'highlight',
+        component: 'views/Components/Highlight',
+        name: 'Highlight',
+        meta: {
+          title: '高亮'
+        }
       }
     ]
   }
