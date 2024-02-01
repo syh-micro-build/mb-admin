@@ -223,6 +223,14 @@ const adminList = [
         meta: {
           title: '信息提示'
         }
+      },
+      {
+        path: 'input-password',
+        component: 'views/Components/InputPassword',
+        name: 'InputPassword',
+        meta: {
+          title: '密码输入框'
+        }
       }
     ]
   }
