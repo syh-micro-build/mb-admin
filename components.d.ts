@@ -58,6 +58,7 @@ declare module 'vue' {
     UserInfo: typeof import('./src/components/UserInfo/src/UserInfo.vue')['default']
     VideoPlayer: typeof import('./src/components/VideoPlayer/src/VideoPlayer.vue')['default']
     VideoPlayerViewer: typeof import('./src/components/VideoPlayerViewer/src/VideoPlayerViewer.vue')['default']
+    Waterfall: typeof import('./src/components/Waterfall/src/Waterfall.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
   export interface ComponentCustomProperties {

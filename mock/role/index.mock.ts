@@ -231,6 +231,14 @@ const adminList = [
         meta: {
           title: '密码输入框'
         }
+      },
+      {
+        path: 'waterfall',
+        component: 'views/Components/Waterfall',
+        name: 'Waterfall',
+        meta: {
+          title: '瀑布流'
+        }
       }
     ]
   }
