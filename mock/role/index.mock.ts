@@ -257,6 +257,37 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/function',
+    component: '#',
+    redirect: '/function/multipleTabs',
+    name: 'Function',
+    meta: {
+      title: '功能',
+      icon: 'ri:function-fill',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'multipleTabs',
+        component: 'views/Function/MultipleTabs',
+        name: 'MultipleTabs',
+        meta: {
+          title: '多开标签页'
+        }
+      },
+      {
+        path: 'multiple-tabs-demo/:id',
+        component: 'views/Function/MultipleTabsDemo',
+        name: 'MultipleTabsDemo',
+        meta: {
+          hidden: true,
+          title: '详情页',
+          canTo: true
+        }
+      }
+    ]
   }
 ]
 
