@@ -1,6 +1,7 @@
 {
   "name": "mb-admin",
   "version": "0.0.0",
+  "author": "ShanYi-Hui <1342088650@qq.com> (https://github.com/ShanYi-Hui)",
   "private": true,
   "type": "module",
   "scripts": {
