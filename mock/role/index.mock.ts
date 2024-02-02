@@ -305,6 +305,27 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/hooks',
+    component: '#',
+    redirect: '/hooks/useWatermark',
+    name: 'Hooks',
+    meta: {
+      title: 'hooks',
+      icon: 'ic:outline-webhook',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'useWatermark',
+        component: 'views/hooks/useWatermark',
+        name: 'UseWatermark',
+        meta: {
+          title: 'useWatermark'
+        }
+      }
+    ]
   }
 ]
 
