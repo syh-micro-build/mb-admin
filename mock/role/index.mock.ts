@@ -286,6 +286,14 @@ const adminList = [
           title: '详情页',
           canTo: true
         }
+      },
+      {
+        path: 'request',
+        component: 'views/Function/Request',
+        name: 'Request',
+        meta: {
+          title: '请求'
+        }
       }
     ]
   }

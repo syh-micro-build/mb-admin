@@ -1,7 +1,12 @@
 import axios, { AxiosError } from 'axios'
 import { defaultRequestInterceptors, defaultResponseInterceptors } from './config'
 
-import type { AxiosInstance, InternalAxiosRequestConfig, RequestConfig, AxiosResponse } from './types'
+import type {
+  AxiosInstance,
+  InternalAxiosRequestConfig,
+  RequestConfig,
+  AxiosResponse
+} from './types'
 import { ElMessage } from 'element-plus'
 import { REQUEST_TIMEOUT } from '@/constants'
 
@@ -18,7 +23,11 @@ axiosInstance.interceptors.request.use((res: InternalAxiosRequestConfig) => {
   const controller = new AbortController()
   const url = res.url || ''
   res.signal = controller.signal
-  abortControllerMap.set(url, controller)
+  console.log(typeof Boolean(import.meta.env.VITE_USE_MOCK))
+  abortControllerMap.set(
+    import.meta.env.VITE_USE_MOCK === 'true' ? url.replace('/mock', '') : url,
+    controller
+  )
   return res
 })
 
