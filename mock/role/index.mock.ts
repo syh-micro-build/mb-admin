@@ -294,6 +294,15 @@ const adminList = [
         meta: {
           title: '请求'
         }
+      },
+      {
+        path: 'test',
+        component: 'views/Function/Test',
+        name: 'Test',
+        meta: {
+          title: '权限测试页',
+          permission: ['add', 'edit', 'delete']
+        }
       }
     ]
   }

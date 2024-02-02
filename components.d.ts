@@ -43,6 +43,7 @@ declare module 'vue' {
     LockPage: typeof import('./src/components/UserInfo/src/components/LockPage.vue')['default']
     Logo: typeof import('./src/components/Logo/src/Logo.vue')['default']
     Menu: typeof import('./src/components/Menu/src/Menu.vue')['default']
+    Permission: typeof import('./src/components/Permission/src/Permission.vue')['default']
     Qrcode: typeof import('./src/components/Qrcode/src/Qrcode.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
