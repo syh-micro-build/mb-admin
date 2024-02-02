@@ -324,6 +324,14 @@ const adminList = [
         meta: {
           title: 'useWatermark'
         }
+      },
+      {
+        path: 'useTagsView',
+        component: 'views/hooks/useTagsView',
+        name: 'UseTagsView',
+        meta: {
+          title: 'useTagsView'
+        }
       }
     ]
   }
