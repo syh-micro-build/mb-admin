@@ -21,6 +21,7 @@ declare module 'vue' {
     Descriptions: typeof import('./src/components/Descriptions/src/Descriptions.vue')['default']
     Dialog: typeof import('./src/components/Dialog/src/Dialog.vue')['default']
     Echart: typeof import('./src/components/Echart/src/Echart.vue')['default']
+    Editor: typeof import('./src/components/Editor/src/Editor.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     Footer: typeof import('./src/components/Footer/src/Footer.vue')['default']
     Form: typeof import('./src/components/Form/src/Form.vue')['default']

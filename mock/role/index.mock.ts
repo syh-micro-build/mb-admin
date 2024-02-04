@@ -137,6 +137,26 @@ const adminList = [
         ]
       },
       {
+        path: 'editor-demo',
+        component: '##',
+        redirect: '/components/editor-demo/editor',
+        name: 'EditorDemo',
+        meta: {
+          title: '编辑器',
+          alwaysShow: true
+        },
+        children: [
+          {
+            path: 'editor',
+            component: 'views/Components/Editor/Editor',
+            name: 'Editor',
+            meta: {
+              title: '富文本'
+            }
+          }
+        ]
+      },
+      {
         path: 'search',
         component: 'views/Components/Search',
         name: 'Search',
