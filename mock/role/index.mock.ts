@@ -376,6 +376,14 @@ const adminList = [
         meta: {
           title: 'useCrudSchemas'
         }
+      },
+      {
+        path: 'useClipboard',
+        component: 'views/hooks/useClipboard',
+        name: 'UseClipboard',
+        meta: {
+          title: 'useClipboard'
+        }
       }
     ]
   }
