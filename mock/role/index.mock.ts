@@ -332,6 +332,14 @@ const adminList = [
         meta: {
           title: 'useTagsView'
         }
+      },
+      {
+        path: 'useValidator',
+        component: 'views/hooks/useValidator',
+        name: 'UseValidator',
+        meta: {
+          title: 'useValidator'
+        }
       }
     ]
   }
