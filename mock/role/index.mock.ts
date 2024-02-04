@@ -368,6 +368,14 @@ const adminList = [
         meta: {
           title: 'useValidator'
         }
+      },
+      {
+        path: 'useCrudSchemas',
+        component: 'views/hooks/useCrudSchemas',
+        name: 'UseCrudSchemas',
+        meta: {
+          title: 'useCrudSchemas'
+        }
       }
     ]
   }

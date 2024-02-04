@@ -20,6 +20,8 @@ import type {
   ISelectProps,
   UploadProps
 } from 'element-plus'
+import type { IEditorConfig } from '@wangeditor/editor'
+import type { JsonEditorProps } from '@/components/JsonEditor'
 import type { CSSProperties } from 'vue'
 import type { JSX } from 'vue/jsx-runtime'
 
@@ -51,8 +53,10 @@ export enum ComponentNameEnum {
   TIME_SELECT = 'TimeSelect',
   SELECT_V2 = 'SelectV2',
   INPUT_PASSWORD = 'InputPassword',
+  EDITOR = 'Editor',
   TREE_SELECT = 'TreeSelect',
   UPLOAD = 'Upload',
+  JSON_EDITOR = 'JsonEditor',
   ICON_PICKER = 'IconPicker'
 }
 
@@ -477,6 +481,11 @@ export interface TimeSelectComponentProps {
   style?: CSSProperties
 }
 
+export interface EditorComponentProps {
+  editorConfig?: IEditorConfig
+  style?: CSSProperties
+}
+
 export interface ColProps {
   span?: number
   xs?: number
@@ -615,6 +624,7 @@ export interface FormSchema {
     | InputPasswordComponentProps
     | TreeSelectComponentProps
     | UploadComponentProps
+    | JsonEditorProps
     | any
 
   /**
