@@ -33,6 +33,7 @@
     "qs": "^6.11.2",
     "vue": "^3.3.11",
     "vue-draggable-plus": "^0.3.5",
+    "vue-json-pretty": "^2.3.0",
     "vue-router": "^4.2.5",
     "vue-types": "^5.1.1",
     "xgplayer": "^3.0.11"

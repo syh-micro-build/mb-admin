@@ -153,6 +153,14 @@ const adminList = [
             meta: {
               title: '富文本'
             }
+          },
+          {
+            path: 'json-editor',
+            component: 'views/Components/Editor/JsonEditor',
+            name: 'JsonEditor',
+            meta: {
+              title: 'JSON编辑器'
+            }
           }
         ]
       },

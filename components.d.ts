@@ -39,6 +39,7 @@ declare module 'vue' {
     Infotip: typeof import('./src/components/Infotip/src/Infotip.vue')['default']
     InputPassword: typeof import('./src/components/InputPassword/src/InputPassword.vue')['default']
     InterfaceDisplay: typeof import('./src/components/Setting/src/components/InterfaceDisplay.vue')['default']
+    JsonEditor: typeof import('./src/components/JsonEditor/src/JsonEditor.vue')['default']
     LayoutRadioPicker: typeof import('./src/components/Setting/src/components/LayoutRadioPicker.vue')['default']
     LockDialog: typeof import('./src/components/UserInfo/src/components/LockDialog.vue')['default']
     LockPage: typeof import('./src/components/UserInfo/src/components/LockPage.vue')['default']
