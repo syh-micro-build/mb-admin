@@ -558,6 +558,27 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/authorization',
+    component: '#',
+    redirect: '/authorization/user',
+    name: 'Authorization',
+    meta: {
+      title: '权限管理',
+      icon: 'eos-icons:role-binding',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'department',
+        component: 'views/Authorization/Department/Department',
+        name: 'Department',
+        meta: {
+          title: '部门管理'
+        }
+      }
+    ]
   }
 ]
 
