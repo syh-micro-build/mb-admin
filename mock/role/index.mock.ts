@@ -394,6 +394,65 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/level',
+    component: '#',
+    redirect: '/level/menu1/menu1-1/menu1-1-1',
+    name: 'Level',
+    meta: {
+      title: '多级菜单',
+      icon: 'carbon:skill-level-advanced'
+    },
+    children: [
+      {
+        path: 'menu1',
+        name: 'Menu1',
+        component: '##',
+        redirect: '/level/menu1/menu1-1/menu1-1-1',
+        meta: {
+          title: '菜单1'
+        },
+        children: [
+          {
+            path: 'menu1-1',
+            name: 'Menu11',
+            component: '##',
+            redirect: '/level/menu1/menu1-1/menu1-1-1',
+            meta: {
+              title: '菜单1-1',
+              alwaysShow: true
+            },
+            children: [
+              {
+                path: 'menu1-1-1',
+                name: 'Menu111',
+                component: 'views/Level/Menu111',
+                meta: {
+                  title: '菜单1-1-1'
+                }
+              }
+            ]
+          },
+          {
+            path: 'menu1-2',
+            name: 'Menu12',
+            component: 'views/Level/Menu12',
+            meta: {
+              title: '菜单1-2'
+            }
+          }
+        ]
+      },
+      {
+        path: 'menu2',
+        name: 'Menu2Demo',
+        component: 'views/Level/Menu2',
+        meta: {
+          title: '菜单2'
+        }
+      }
+    ]
   }
 ]
 
