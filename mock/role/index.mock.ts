@@ -453,6 +453,27 @@ const adminList = [
         }
       }
     ]
+  },
+  {
+    path: '/example',
+    component: '#',
+    redirect: '/example/example-dialog',
+    name: 'Example',
+    meta: {
+      title: '综合示例',
+      icon: 'ep:management',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'example-dialog',
+        component: 'views/Example/Dialog/ExampleDialog',
+        name: 'ExampleDialog',
+        meta: {
+          title: '综合示例 - 弹窗'
+        }
+      }
+    ]
   }
 ]
 
