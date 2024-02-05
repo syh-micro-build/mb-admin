@@ -472,6 +472,53 @@ const adminList = [
         meta: {
           title: '综合示例 - 弹窗'
         }
+      },
+      {
+        path: 'example-page',
+        component: 'views/Example/Page/ExamplePage',
+        name: 'ExamplePage',
+        meta: {
+          title: '综合示例 - 页面'
+        }
+      },
+      {
+        path: 'example-add',
+        component: 'views/Example/Page/ExampleAdd',
+        name: 'ExampleAdd',
+        meta: {
+          title: '综合示例 - 新增',
+          noTagsView: true,
+          noCache: true,
+          hidden: true,
+          showMainRoute: true,
+          activeMenu: '/example/example-page'
+        }
+      },
+      {
+        path: 'example-edit',
+        component: 'views/Example/Page/ExampleEdit',
+        name: 'ExampleEdit',
+        meta: {
+          title: '综合示例 - 编辑',
+          noTagsView: true,
+          noCache: true,
+          hidden: true,
+          showMainRoute: true,
+          activeMenu: '/example/example-page'
+        }
+      },
+      {
+        path: 'example-detail',
+        component: 'views/Example/Page/ExampleDetail',
+        name: 'ExampleDetail',
+        meta: {
+          title: '综合示例 - 详情',
+          noTagsView: true,
+          noCache: true,
+          hidden: true,
+          showMainRoute: true,
+          activeMenu: '/example/example-page'
+        }
       }
     ]
   }

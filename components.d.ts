@@ -15,6 +15,7 @@ declare module 'vue' {
     ColorRadioPicker: typeof import('./src/components/Setting/src/components/ColorRadioPicker.vue')['default']
     ColumnSetting: typeof import('./src/components/Table/src/components/ColumnSetting.vue')['default']
     ConfigGlobal: typeof import('./src/components/ConfigGlobal/src/ConfigGlobal.vue')['default']
+    ContentDetailWrap: typeof import('./src/components/ContentDetailWrap/src/ContentDetailWrap.vue')['default']
     ContentWrap: typeof import('./src/components/ContentWrap/src/ContentWrap.vue')['default']
     ContextMenu: typeof import('./src/components/ContextMenu/src/ContextMenu.vue')['default']
     CountTo: typeof import('./src/components/CountTo/src/CountTo.vue')['default']
