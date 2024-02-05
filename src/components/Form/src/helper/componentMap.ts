@@ -21,6 +21,8 @@ import {
   ElUpload
 } from 'element-plus'
 import { InputPassword } from '@/components/InputPassword'
+import { Editor } from '@/components/Editor'
+import { JsonEditor } from '@/components/JsonEditor'
 import { IconPicker } from '@/components/IconPicker'
 import type { ComponentName } from '../types'
 
@@ -45,8 +47,10 @@ const componentMap: Recordable<Component, ComponentName> = {
   TimeSelect: ElTimeSelect,
   SelectV2: ElSelectV2,
   InputPassword: InputPassword,
+  Editor: Editor,
   TreeSelect: ElTreeSelect,
   Upload: ElUpload,
+  JsonEditor: JsonEditor,
   IconPicker: IconPicker
 }
 
