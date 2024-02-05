@@ -577,6 +577,14 @@ const adminList = [
         meta: {
           title: '部门管理'
         }
+      },
+      {
+        path: 'user',
+        component: 'views/Authorization/User/User',
+        name: 'User',
+        meta: {
+          title: '用户管理'
+        }
       }
     ]
   }
