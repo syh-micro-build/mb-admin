@@ -384,6 +384,14 @@ const adminList = [
         meta: {
           title: 'useClipboard'
         }
+      },
+      {
+        path: 'useNetwork',
+        component: 'views/hooks/useNetwork',
+        name: 'UseNetwork',
+        meta: {
+          title: 'useNetwork'
+        }
       }
     ]
   }
