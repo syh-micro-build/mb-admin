@@ -593,6 +593,14 @@ const adminList = [
         meta: {
           title: '菜单管理'
         }
+      },
+      {
+        path: 'role',
+        component: 'views/Authorization/Role/Role',
+        name: 'Role',
+        meta: {
+          title: '角色管理'
+        }
       }
     ]
   }
