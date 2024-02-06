@@ -39,6 +39,23 @@ const adminList = [
     ]
   },
   {
+    path: '/guide',
+    component: '#',
+    name: 'Guide',
+    meta: {},
+    children: [
+      {
+        path: 'index',
+        component: 'views/Guide/Guide',
+        name: 'GuideDemo',
+        meta: {
+          title: '引导',
+          icon: 'cib:telegram-plane'
+        }
+      }
+    ]
+  },
+  {
     path: '/components',
     component: '#',
     redirect: '/components/form/default-form',
