@@ -39,6 +39,22 @@ const adminList = [
     ]
   },
   {
+    path: '/external-link',
+    component: '#',
+    meta: {},
+    name: 'ExternalLink',
+    children: [
+      {
+        path: 'https://github.com/syh-micro-build/mb-admin',
+        name: 'DocumentLink',
+        meta: {
+          title: '文档',
+          icon: 'clarity:document-solid'
+        }
+      }
+    ]
+  },
+  {
     path: '/guide',
     component: '#',
     name: 'Guide',
