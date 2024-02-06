@@ -585,6 +585,14 @@ const adminList = [
         meta: {
           title: '用户管理'
         }
+      },
+      {
+        path: 'menu',
+        component: 'views/Authorization/Menu/Menu',
+        name: 'Menu',
+        meta: {
+          title: '菜单管理'
+        }
       }
     ]
   }
