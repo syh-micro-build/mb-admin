@@ -76,7 +76,7 @@ const handleLock = async () => {
   >
     <div class="flex flex-col items-center">
       <img src="@/assets/imgs/avatar.jpg" alt="" class="w-70px h-70px rounded-[50%]" />
-      <span class="text-14px my-10px text-[var(--top-header-text-color)]">Archer</span>
+      <span class="text-14px my-10px text-[var(--top-header-text-color)]">ShanYi</span>
     </div>
     <Form :is-col="false" :schema="schema" :rules="rules" @register="formRegister" />
     <template #footer>

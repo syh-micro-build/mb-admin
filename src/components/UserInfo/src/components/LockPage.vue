@@ -59,9 +59,7 @@ function handleShowForm(show = false) {
 </script>
 
 <template>
-  <div
-    class="lock-page fixed inset-0 flex h-screen w-screen bg-black items-center justify-center"
-  >
+  <div class="lock-page fixed inset-0 flex h-screen w-screen bg-black items-center justify-center">
     <div
       :class="`lock-page__unlock`"
       class="absolute top-0 left-1/2 flex pt-5 h-16 items-center justify-center sm:text-md xl:text-xl text-white flex-col cursor-pointer transform translate-x-1/2"
@@ -88,7 +86,7 @@ function handleShowForm(show = false) {
         <div :class="`lock-page-entry-content`">
           <div class="flex flex-col items-center">
             <img src="@/assets/imgs/avatar.jpg" alt="" class="w-70px h-70px rounded-[50%]" />
-            <span class="text-14px my-10px text-[var(--logo-title-text-color)]">Archer</span>
+            <span class="text-14px my-10px text-[var(--logo-title-text-color)]">ShanYi</span>
           </div>
           <ElInput
             type="password"
