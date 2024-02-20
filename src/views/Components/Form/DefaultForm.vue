@@ -32,7 +32,7 @@ const querySearch = (queryString: string, cb: Fn) => {
   // call callback function to return suggestions
   cb(results)
 }
-let timeout: number | undefined
+let timeout: string | number | NodeJS.Timeout | undefined
 const querySearchAsync = (queryString: string, cb: (arg: any) => void) => {
   const results = queryString
     ? restaurants.value.filter(createFilter(queryString))

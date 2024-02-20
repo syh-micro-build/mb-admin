@@ -11,6 +11,8 @@ node_modules
 .DS_Store
 dist
 dist-ssr
+/dist*
+stats.html
 coverage
 *.local
 

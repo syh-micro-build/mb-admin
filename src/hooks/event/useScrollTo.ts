@@ -17,7 +17,7 @@ const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
   return (-c / 2) * (t * (t - 2) - 1) + b
 }
 const move = (el: HTMLElement, position: string, amount: number) => {
-  el[position] = amount
+  ;(el as any)[position] = amount
 }
 
 export function useScrollTo({
@@ -28,7 +28,7 @@ export function useScrollTo({
   callback
 }: ScrollToParams) {
   const isActiveRef = ref(false)
-  const start = el[position]
+  const start = (el as any)[position]
   const change = to - start
   const increment = 20
   let currentTime = 0
