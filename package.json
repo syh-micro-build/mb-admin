@@ -9,11 +9,12 @@
     "dev": "vite --mode base",
     "build": "run-p type-check \"build-only -- --mode {1}\" --",
     "preview": "vite preview --mode",
-    "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test:unit": "vitest",
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify/vue": "^4.1.1",
@@ -58,6 +59,7 @@
     "@vue/tsconfig": "^0.5.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "husky": "^9.0.11",
     "jsdom": "^23.0.1",
     "less": "^4.2.0",
     "npm-run-all2": "^6.1.1",
