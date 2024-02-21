@@ -29,7 +29,7 @@ export default defineComponent({
   setup() {
     return () => (
       <div
-        id='tool-header'
+        id="tool-header"
         class={[
           'tool-header',
           'h-[var(--top-tool-height)] relative px-[var(--top-tool-p-x)] flex items-center justify-between'

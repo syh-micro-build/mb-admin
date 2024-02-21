@@ -251,10 +251,7 @@ watch(
 </script>
 
 <template>
-  <div
-    id="tags-view"
-    class="tags-view flex w-full relative bg-[#fff] dark:bg-[var(--el-bg-color)]"
-  >
+  <div id="tags-view" class="tags-view flex w-full relative bg-[#fff] dark:bg-[var(--el-bg-color)]">
     <span
       :class="`tags-view__tool tags-view__tool--first`"
       class="w-[var(--tags-view-height)] h-[var(--tags-view-height)] flex items-center justify-center cursor-pointer"

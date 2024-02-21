@@ -82,7 +82,7 @@ const schema = reactive<FormSchema[]>([
         default: (formData) => {
           return (
             <div class="w-[100%] flex">
-              <ElInput v-model={formData.code} placeholder='请输入验证码' />
+              <ElInput v-model={formData.code} placeholder="请输入验证码" />
             </div>
           )
         }

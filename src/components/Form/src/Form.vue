@@ -255,7 +255,9 @@ export default defineComponent({
           if (item?.formItemProps?.slots?.default) {
             return item?.formItemProps?.slots?.default(formModel.value)
           } else {
-            const Com = componentMap[item.component as ComponentName] as ReturnType<typeof defineComponent>
+            const Com = componentMap[item.component as ComponentName] as ReturnType<
+              typeof defineComponent
+            >
 
             const { autoSetPlaceholder } = unref(getProps)
 
@@ -276,7 +278,7 @@ export default defineComponent({
 
             // 虚拟列表
             if (item.component === ComponentNameEnum.SELECT_V2 && componentSlots.default) {
-              slotsMap.default = ({ item } : { item: FormSchema }) => {
+              slotsMap.default = ({ item }: { item: FormSchema }) => {
                 return componentSlots.default(item)
               }
             }
@@ -396,7 +398,7 @@ export default defineComponent({
         ref={elFormRef}
         {...getFormBindValue()}
         model={unref(getProps).isCustom ? unref(getProps).model : formModel}
-        class='form'
+        class="form"
         // @ts-ignore
         onSubmit={(e: Event) => {
           e.preventDefault()

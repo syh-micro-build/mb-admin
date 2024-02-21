@@ -278,9 +278,7 @@ const themeChange = () => {
       <BaseButton type="primary" class="w-full" @click="copyConfig">拷贝</BaseButton>
     </div>
     <div class="mt-5px">
-      <BaseButton type="danger" class="w-full" @click="clear">
-        清除缓存并且重置
-      </BaseButton>
+      <BaseButton type="danger" class="w-full" @click="clear"> 清除缓存并且重置 </BaseButton>
     </div>
   </ElDrawer>
 </template>

@@ -21,19 +21,19 @@ const handleClickOutside = () => {
 
 const renderLayout = () => {
   switch (unref(layout)) {
-    case 'classic':{
+    case 'classic': {
       const { renderClassic } = useRenderLayout()
       return renderClassic()
     }
-    case 'topLeft':{
+    case 'topLeft': {
       const { renderTopLeft } = useRenderLayout()
       return renderTopLeft()
     }
-    case 'top':{
+    case 'top': {
       const { renderTop } = useRenderLayout()
       return renderTop()
     }
-    case 'cutMenu':{
+    case 'cutMenu': {
       const { renderCutMenu } = useRenderLayout()
       return renderCutMenu()
     }

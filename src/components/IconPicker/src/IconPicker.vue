@@ -177,7 +177,6 @@ const inputClear = () => {
 </template>
 
 <style lang="less" scoped>
-
 .icon-picker {
   :deep(.el-input__wrapper) {
     border-top-right-radius: 0;

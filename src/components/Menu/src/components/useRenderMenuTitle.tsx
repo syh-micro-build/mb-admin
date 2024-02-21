@@ -13,9 +13,7 @@ export const useRenderMenuTitle = () => {
         </span>
       </>
     ) : (
-      <span class="v-menu__title overflow-hidden overflow-ellipsis whitespace-nowrap">
-        {title}
-      </span>
+      <span class="v-menu__title overflow-hidden overflow-ellipsis whitespace-nowrap">{title}</span>
     )
   }
 

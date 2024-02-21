@@ -48,7 +48,6 @@ const getIconifyStyle = computed(() => {
 </template>
 
 <style lang="less" scoped>
-
 .icon,
 .iconify {
   :deep(svg) {

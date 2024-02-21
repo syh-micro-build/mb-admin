@@ -60,7 +60,6 @@ const getPasswordStrength = computed(() => {
 </template>
 
 <style lang="less" scoped>
-
 .input-password {
   :deep(.el-input__clear) {
     margin-left: 5px;

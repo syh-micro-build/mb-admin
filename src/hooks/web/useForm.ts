@@ -89,7 +89,7 @@ export const useForm = () => {
       const model = form?.formModel as any
       if (filterEmptyVal) {
         // 使用reduce过滤空值，并返回一个新对象
-        return Object.keys(model).reduce((prev:Recordable, next) => {
+        return Object.keys(model).reduce((prev: Recordable, next) => {
           const value = model[next]
           if (!isEmptyVal(value)) {
             if (isObject(value)) {
