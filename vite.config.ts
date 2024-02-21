@@ -14,7 +14,8 @@ import { ViteEjsPlugin } from 'vite-plugin-ejs'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
+  const isBuild = command === 'build'
   const env = loadEnv(mode, process.cwd(), '')
   return {
     base: env.VITE_BASE_PATH,
@@ -51,8 +52,15 @@ export default defineConfig(({ mode }) => {
       }),
       env.VITE_USE_MOCK === 'true'
         ? viteMockServe({
+            ignore: /^_/,
             mockPath: 'mock',
-            enable: true
+            localEnabled: !isBuild,
+            prodEnabled: isBuild,
+            injectCode: `
+          import { setupProdMockServer } from '../mock/_createProductionServer'
+
+          setupProdMockServer()
+          `
           })
         : undefined,
       UnoCSS(),
