@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "一套基于 vue3、element-plus、typesScript、vite 的后台集成方案。",
   "author": "ShanYi-Hui <shanyi.hui@qq.com> (https://github.com/ShanYi-Hui)",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite --mode base",
@@ -104,5 +104,6 @@
   "bugs": {
     "url": "https://github.com/syh-micro-build/mb-admin/issues"
   },
-  "homepage": "https://github.com/syh-micro-build/mb-admin"
+  "homepage": "https://github.com/syh-micro-build/mb-admin",
+  "license": "MIT"
 }
