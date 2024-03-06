@@ -1,0 +1,16 @@
+{
+  "types": [
+    { "type": "feat", "section": "✨  新增功能 | New Feature" },
+    { "type": "fix", "section": "🐛  修复缺陷 | Bug Fixes" },
+    { "type": "init", "section": "🎉 初始化 | Init" },
+    { "type": "docs", "section": "📝  文档更新 | Documentation" },
+    { "type": "style", "section": "💄  代码格式 | Styles" },
+    { "type": "refactor", "section": "♻️   代码重构 | Code Refactoring" },
+    { "type": "perf", "section": "⚡️  性能提升 | Performance Improvements" },
+    { "type": "test", "section": "✅  测试相关 | Tests" },
+    { "type": "revert", "section": "⏪️  回退代码 | Code Revert" },
+    { "type": "build", "section": "📦️   构建相关 | Builds" },
+    { "type": "chore", "section": "🔨  其他修改 | Chore" },
+    { "type": "ci", "section": "🎡  持续集成 | Continuous Integration" }
+  ]
+}
