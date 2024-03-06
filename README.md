@@ -90,6 +90,16 @@ git add .
 npx cz
 ```
 
+- 版本更新
+
+```bash
+npm run release
+```
+
+## 更新日志
+
+[更新日志](./CHANGELOG.md)
+
 ## 如何贡献
 
 <a href="https://github.com/syh-micro-build/mb-admin/graphs/contributors">
