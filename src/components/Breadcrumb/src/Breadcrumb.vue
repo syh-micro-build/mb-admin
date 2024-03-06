@@ -82,6 +82,7 @@ export default defineComponent({
 .breadcrumb {
   :deep(&__item) {
     display: flex;
+
     .breadcrumb__inner {
       display: flex;
       align-items: center;

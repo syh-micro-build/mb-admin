@@ -161,18 +161,23 @@ getCount()
       :deep(.icon) {
         color: #fff !important;
       }
+
       .panel__item--icon {
         transition: all 0.38s ease-out;
       }
+
       .panel__item--peoples {
         background: #40c9c6;
       }
+
       .panel__item--message {
         background: #36a3f7;
       }
+
       .panel__item--money {
         background: #f4516c;
       }
+
       .panel__item--shopping {
         background: #34bfa3;
       }

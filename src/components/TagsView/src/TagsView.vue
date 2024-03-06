@@ -510,6 +510,7 @@ watch(
       display: none;
       transform: translate(0, -50%);
     }
+
     &:not(.tags-view__item--affix):hover {
       .tags-view__item--close {
         display: block;
@@ -527,6 +528,7 @@ watch(
     color: var(--el-color-white);
     background-color: var(--el-color-primary);
     border: 1px solid var(--el-color-primary);
+
     .tags-view__item--close {
       :deep(svg) {
         color: var(--el-color-white) !important;
@@ -559,6 +561,7 @@ watch(
       color: var(--el-color-white);
       background-color: var(--el-color-primary);
       border: 1px solid var(--el-color-primary);
+
       .tags-view__item--close {
         :deep(svg) {
           color: var(--el-color-white) !important;
