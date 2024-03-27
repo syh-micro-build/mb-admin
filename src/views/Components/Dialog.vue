@@ -7,6 +7,7 @@ import { Form, type FormSchema } from '@/components/Form'
 import { useValidator } from '@/hooks/web/useValidator'
 import { getDictOneApi } from '@/api/common'
 import { useForm } from '@/hooks/web/useForm'
+import Echart from './Echart.vue'
 
 const { required } = useValidator()
 
@@ -107,7 +108,7 @@ const formSubmit = async () => {
     <BaseButton type="primary" @click="dialogVisible2 = !dialogVisible2"> 与表单结合 </BaseButton>
 
     <Dialog v-model="dialogVisible" title="弹窗">
-      <div v-for="v in 10000" :key="v">{{ v }}</div>
+      <Echart />
       <template #footer>
         <BaseButton @click="dialogVisible = false">关闭</BaseButton>
       </template>
