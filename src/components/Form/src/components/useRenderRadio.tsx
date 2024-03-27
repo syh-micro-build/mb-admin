@@ -14,12 +14,13 @@ export const useRenderRadio = () => {
     ) as ReturnType<typeof defineComponent>
     return componentProps?.options?.map((option) => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { value, ...other } = option
+      const { ...other } = option
       return (
         <Com
           {...other}
           disabled={option[disabledAlias || 'disabled']}
-          label={option[valueAlias || 'value']}
+          label={option[labelAlias || 'label']}
+          value={option[valueAlias || 'value']}
         >
           {option[labelAlias || 'label']}
         </Com>
