@@ -31,6 +31,7 @@ mb-admin 的定位是后台集成方案，不太适合当基础模板来进行�
 - [Vue-Router-Next](https://next.router.vuejs.org/) - 熟悉 vue-router 基本使用
 - [Element-Plus](https://element-plus.org/) - element-plus 基本使用
 - [Mock.js](https://github.com/nuysoft/Mock) - mockjs 基本语法
+- [UnoCSS](https://unocss.dev/) - 熟悉 UnoCSS 即时按需原子 CSS 引擎
 
 ## 安装和使用
 
@@ -94,6 +95,12 @@ npx cz
 
 ```bash
 npm run release
+```
+
+- 项目依赖更新
+
+```bash
+npx npm-check-updates -i --format
 ```
 
 ## 更新日志
