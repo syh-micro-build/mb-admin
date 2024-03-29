@@ -5,7 +5,7 @@ VITE_NODE_ENV=production
 VITE_API_BASE_PATH=
 
 # 打包路径
-VITE_BASE_PATH=/
+VITE_BASE_PATH=./
 
 # 是否删除debugger
 VITE_DROP_DEBUGGER=true
@@ -35,4 +35,4 @@ VITE_USE_MOCK=true
 VITE_USE_CSS_SPLIT=true
 
 # 是否使用在线图标
-VITE_USE_ONLINE_ICON=false
+VITE_USE_ONLINE_ICON=true
