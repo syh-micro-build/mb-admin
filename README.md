@@ -21,6 +21,12 @@ mb-admin 的定位是后台集成方案，不太适合当基础模板来进行�
 - **组件** 二次封装了多个常用的组件
 - **示例** 内置丰富的示例
 
+## 预览
+
+#### [mb-admin 预览](https://syh-micro-build.github.io/mb-admin/)
+
+*帐号密码：admin / admin*
+
 ## 前序准备
 
 - [node](http://nodejs.org/) 和 [git](https://git-scm.com/) - 项目开发环境
@@ -146,6 +152,26 @@ npx npm-check-updates -i --format
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
 | :-: | :-: | :-: | :-: | :-: |
 | not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+
+## 捐赠
+
+捐赠开源，让技术照亮更多人的未来~~~
+
+- 支付宝
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/alipay.png" style="width: 200px;" />
+
+- 微信
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/weixinpay.png"  style="width: 200px;"/>
+
+## 技术交流
+
+欢迎大家加入技术交流群，探讨技术，一起进步~~~
+
+- qq群：415849653
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/qqgroup.png" style="width: 200px;" />
+
+- 微信群
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/weixingroup.png" style="width: 200px;" />
 
 ## 许可证
 
