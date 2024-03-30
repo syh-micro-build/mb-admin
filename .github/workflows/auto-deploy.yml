@@ -14,11 +14,10 @@ on:
 
 permissions:
   # 允许对仓库的内容进行写操作。包括创建、修改和删除文件、目录以及提交更改等
-  # 这里只配置了push，所以只有推送main分支才会触发以下任务 
+  # 这里只配置了push，所以只有推送main分支才会触发以下任务
   contents: write
   # 允许管理 GitHub Pages 服务并对其进行写操作
   pages: write
-
 
 jobs:
   # 任务ID
@@ -29,27 +28,27 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
-    
+
     # 步骤
     steps:
       # 官方action，将代码拉取到虚拟机
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 建一个名为setup-node的步骤（安装指定版本的Node.js）
-      - name: setup-node 
+      - name: setup-node
         # 使用setup-node@v3这个action
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         # 指定某个action 可能需要输入的参数
         with:
           node-version: '18.12.1'
 
-      # 安装依赖  
+      # 安装依赖
       - name: Install dependencies
         run: npm install
       # 打包
       - name: Build application 🔧
-        run: npm run build pro
+        run: npm run build github
 
       # 部署 https://github.com/JamesIves/github-pages-deploy-action
       - name: Deploy 🚀
@@ -57,8 +56,8 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           token: ${{ secrets.MB_ADMIN_TOKEN }}
-          branch: gh-pages  # default: gh-pages
-          folder: dist-pro
+          branch: gh-pages # default: gh-pages
+          folder: dist-github
           clean: true # Automatically remove deleted files from the deploy branch
           # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
           # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
