@@ -45,7 +45,7 @@ const adminList = [
     name: 'ExternalLink',
     children: [
       {
-        path: 'https://github.com/syh-micro-build/mb-admin',
+        path: 'https://syh-micro-build.github.io/mb-admin-doc/',
         name: 'DocumentLink',
         meta: {
           title: '文档',

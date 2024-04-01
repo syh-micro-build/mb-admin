@@ -24,7 +24,7 @@ const lockScreen = () => {
 }
 
 const toDocument = () => {
-  window.open('https://github.com/syh-micro-build/mb-admin?tab=readme-ov-file#mb-admin')
+  window.open('https://syh-micro-build.github.io/mb-admin-doc/')
 }
 </script>
 

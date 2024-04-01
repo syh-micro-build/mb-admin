@@ -100,7 +100,7 @@ export default [
               title: '文档',
               children: [
                 {
-                  path: 'https://element-plus-admin-doc.cn/',
+                  path: 'https://syh-micro-build.github.io/mb-admin-doc/',
                   name: 'DocumentLink',
                   status: Mock.Random.integer(0, 1),
                   id: 5,
