@@ -23,9 +23,13 @@ mb-admin 的定位是后台集成方案，不太适合当基础模板来进行�
 
 ## 预览
 
-#### [mb-admin 预览](https://syh-micro-build.github.io/mb-admin/)
+#### [在线预览👈](https://syh-micro-build.github.io/mb-admin/)
 
 *帐号密码：admin / admin*
+
+## 官方文档
+
+#### [官方文档👈](https://syh-micro-build.github.io/mb-admin-doc/)
 
 ## 前序准备
 
