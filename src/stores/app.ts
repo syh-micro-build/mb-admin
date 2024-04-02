@@ -55,7 +55,7 @@ export const useAppStore = defineStore('app', {
       fixedHeader: true, // 固定toolheader
       footer: true, // 显示页脚
       greyMode: false, // 是否开始灰色模式，用于特殊悼念日
-      dynamicRouter: true, // 是否动态路由
+      dynamicRouter: import.meta.env.VITE_APP_DYNAMIC_ROUTER === 'true', // 是否动态路由
       serverDynamicRouter: true, // 是否服务端渲染动态路由
       fixedMenu: false, // 是否固定菜单
 
