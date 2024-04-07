@@ -15,6 +15,7 @@
     "format": "prettier --write src/",
     "test:unit": "vitest",
     "prepare": "husky",
+    "plop": "plop",
     "release": "standard-version"
   },
   "dependencies": {
@@ -69,6 +70,7 @@
     "less": "^4.2.0",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
+    "plop": "^4.0.1",
     "postcss-html": "^1.6.0",
     "postcss-less": "^6.0.0",
     "prettier": "^3.2.5",
