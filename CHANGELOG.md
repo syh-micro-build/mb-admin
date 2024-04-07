@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/syh-micro-build/mb-admin/compare/v1.1.1...v1.2.0) (2024-04-07)
+
+
+### 🎡  持续集成 | Continuous Integration
+
+* :ferris_wheel: 自动化构建部署至 github pages 测试 ([1684deb](https://github.com/syh-micro-build/mb-admin/commit/1684debf56ae7d4ad0f53c003284d7b1100a2599))
+* :ferris_wheel: 自动化构建部署至 github pages 调试 ([25438dc](https://github.com/syh-micro-build/mb-admin/commit/25438dc015e55a1646b09c8dca680f38200fc57d))
+
+
+### 📦️   构建相关 | Builds
+
+* :package: 根据构建模式选择动态路由或静态路由 ([29f5ad8](https://github.com/syh-micro-build/mb-admin/commit/29f5ad8a735a6b37709a8df903257718ac6368ca))
+
+
+### 📝  文档更新 | Documentation
+
+* :memo: 添加官方文档地址 ([e03c8d2](https://github.com/syh-micro-build/mb-admin/commit/e03c8d25a74ecdbfd5c80a8d3a2af614794adf4f))
+* 📝 添加在线预览，捐赠，交流群 ([456c923](https://github.com/syh-micro-build/mb-admin/commit/456c9233384c676dfe64780814b76841441cbf84))
+* **ui:** :memo: 更新在线文档地址 ([27c8f7a](https://github.com/syh-micro-build/mb-admin/commit/27c8f7aed4688003665b7523624ae53cee83c81b))
+
+
+### ✨  新增功能 | New Feature
+
+* **tool:** :sparkles: 添加微型代码生成器plop ([124dee0](https://github.com/syh-micro-build/mb-admin/commit/124dee09521aed2ff450c0f71dcf7e9f282c544e))
+
 ### [1.1.1](https://github.com/syh-micro-build/mb-admin/compare/v1.1.0...v1.1.1) (2024-03-28)
 
 
