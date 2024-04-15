@@ -164,20 +164,20 @@ npx npm-check-updates -i --format
 捐赠开源，让技术照亮更多人的未来~~~
 
 - 支付宝
-<img src="https://cdn.jsdelivr.net/gh/ShanYi-Hui/images/alipay.png" style="width: 200px;" />
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/alipay.png" style="width: 200px;" />
 
 - 微信
-<img src="https://cdn.jsdelivr.net/gh/ShanYi-Hui/images/weixinpay.png"  style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/weixinpay.png"  style="width: 200px;"/>
 
 ## 技术交流
 
 欢迎大家加入技术交流群，探讨技术，一起进步~~~
 
 - qq群：415849653
-<img src="https://cdn.jsdelivr.net/gh/ShanYi-Hui/images/qqgroup.png" style="width: 200px;" />
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/qqgroup.png" style="width: 200px;" />
 
 - 微信群
-<img src="https://cdn.jsdelivr.net/gh/ShanYi-Hui/images/weixingroup.png" style="width: 200px;" />
+<img src="https://raw.githubusercontent.com/ShanYi-Hui/images/main/weixingroup.png" style="width: 200px;" />
 
 ## 许可证
 
