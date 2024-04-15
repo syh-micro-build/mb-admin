@@ -410,6 +410,11 @@ setTimeout(async () => {
   const formData = await getFormData()
   console.log(formData)
 }, 2000)
+
+const getData = async () => {
+  const formData = await getFormData()
+  console.log(formData)
+}
 </script>
 
 <template>
@@ -440,6 +445,7 @@ setTimeout(async () => {
 
     <BaseButton @click="inoutFocus"> 输入框 聚焦 </BaseButton>
     <BaseButton @click="inoutValidation"> 输入框 表单验证 </BaseButton>
+    <BaseButton @click="getData"> 获取值 </BaseButton>
   </ContentWrap>
   <ContentWrap title="UseForm 示例">
     <Form :schema="schema" @register="formRegister" @validate="formValidate" />
