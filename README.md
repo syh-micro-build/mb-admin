@@ -11,6 +11,10 @@ mb-admin 是一个基于 `element-plus` 免费开源的中后台模版。使用�
 
 mb-admin 的定位是后台集成方案，不太适合当基础模板来进行二次开发。因为集成了很多你可能用不到的功能，会造成不少的代码冗余。如果你的项目不关注这方面的问题，也可以直接基于它进行二次开发。
 
+### 生态
+
+- [mb-cli](https://github.com/syh-micro-build/mb-cli?tab=readme-ov-file): Micro Build 生态中的脚手架工具。主要用于创建和发布 Micro Build 中的组件、模块或应用，为开发人员生成模板，使其专注于核心业务开发并快速产出上线，同时它具备对接大型代码托管平台的能力（官方默认支持GitHub，GitLab 及 Gitee）。
+
 ## 特性
 
 - **最新技术栈**：使用 Vue3 + vite5 + vueRouter + pina 等前端前沿技术开发
