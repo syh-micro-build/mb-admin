@@ -82,7 +82,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     name: 'ExternalLink',
     children: [
       {
-        path: 'https://syh-micro-build.github.io/mb-admin-doc/',
+        path: 'https://admindoc.mbuild.top',
         name: 'DocumentLink',
         meta: {
           title: '文档',

@@ -24,7 +24,7 @@ const lockScreen = () => {
 }
 
 const toDocument = () => {
-  window.open('https://syh-micro-build.github.io/mb-admin-doc/')
+  window.open('https://admindoc.mbuild.top')
 }
 </script>
 
