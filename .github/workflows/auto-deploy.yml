@@ -98,6 +98,18 @@ jobs:
           # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
           # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
 
+      - name: Set SSH Environment
+        env:
+          GITEE_RSA_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$GITEE_RSA_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com > ~/.ssh/known_hosts
+          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+          git config --local user.email "shanyi.hui@qq.com"
+          git config --local user.name "ShanYi-Hui"
+
       ## 同步代码
       - name: Sync Code # 名字随便起
         uses: Yikun/hub-mirror-action@master # 使用Yikun/hub-mirror-action
