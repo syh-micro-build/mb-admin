@@ -35,95 +35,80 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # # 建一个名为setup-node的步骤（安装指定版本的Node.js）
-      # - name: setup-node
-      #   # 使用setup-node@v3这个action
-      #   uses: actions/setup-node@v4
-      #   # 指定某个action 可能需要输入的参数
-      #   with:
-      #     node-version: '18.12.1'
+      # 建一个名为setup-node的步骤（安装指定版本的Node.js）
+      - name: setup-node
+        # 使用setup-node@v3这个action
+        uses: actions/setup-node@v4
+        # 指定某个action 可能需要输入的参数
+        with:
+          node-version: '18.12.1'
 
-      # # 安装依赖
-      # - name: Install dependencies
-      #   run: npm install
-      # # 打包
-      # - name: Build application 🔧
-      #   run: npm run build github
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
+      # 打包
+      - name: Build application 🔧
+        run: npm run build github
 
-      # # 部署 https://github.com/JamesIves/github-pages-deploy-action
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   if: github.ref == 'refs/heads/main'
-      #   with:
-      #     token: ${{ secrets.MB_ADMIN_TOKEN }}
-      #     branch: gh-pages # default: gh-pages
-      #     folder: dist-github
-      #     clean: true # Automatically remove deleted files from the deploy branch
-      #     # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
-      #     # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
+      # 部署 https://github.com/JamesIves/github-pages-deploy-action
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          token: ${{ secrets.MB_ADMIN_TOKEN }}
+          branch: gh-pages # default: gh-pages
+          folder: dist-github
+          clean: true # Automatically remove deleted files from the deploy branch
+          # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
+          # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
   sync-to-gitee:
     # github 构建部署成功后触发
     needs: build-and-deploy
     runs-on: ubuntu-latest
     steps:
-      # # 官方action，将代码拉取到虚拟机
-      # - name: Checkout
-      #   uses: actions/checkout@v4
+      # 官方action，将代码拉取到虚拟机
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      # # 建一个名为setup-node的步骤（安装指定版本的Node.js）
-      # - name: setup-node
-      #   # 使用setup-node@v3这个action
-      #   uses: actions/setup-node@v4
-      #   # 指定某个action 可能需要输入的参数
-      #   with:
-      #     node-version: '18.12.1'
+      # 建一个名为setup-node的步骤（安装指定版本的Node.js）
+      - name: setup-node
+        # 使用setup-node@v3这个action
+        uses: actions/setup-node@v4
+        # 指定某个action 可能需要输入的参数
+        with:
+          node-version: '18.12.1'
 
-      # # 安装依赖
-      # - name: Install dependencies
-      #   run: npm install
+      # 安装依赖
+      - name: Install dependencies
+        run: npm install
 
-      # # 打包
-      # - name: Build application
-      #   run: npm run build gitee
+      # 打包
+      - name: Build application
+        run: npm run build gitee
 
-      # # 部署 https://github.com/JamesIves/github-pages-deploy-action
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   if: github.ref == 'refs/heads/main'
-      #   with:
-      #     token: ${{ secrets.MB_ADMIN_TOKEN }}
-      #     branch: gh-pages-gitee # default: gh-pages
-      #     folder: dist-gitee
-      #     clean: true # Automatically remove deleted files from the deploy branch
-      #     # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
-      #     # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
-
-      - name: Set SSH Environment
-        env:
-          GITEE_RSA_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$GITEE_RSA_PRIVATE_KEY" > ~/.ssh/id_rsa
-          cat ~/.ssh/id_rsa
-          cat /root/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          chmod 600 /root/.ssh/id_rsa
-          ssh-keyscan github.com > ~/.ssh/known_hosts
-          chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-          git config --local user.email "shanyi.hui@qq.com"
-          git config --local user.name "ShanYi-Hui"
+      # 部署 https://github.com/JamesIves/github-pages-deploy-action
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          token: ${{ secrets.MB_ADMIN_TOKEN }}
+          branch: gh-pages-gitee # default: gh-pages
+          folder: dist-gitee
+          clean: true # Automatically remove deleted files from the deploy branch
+          # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
+          # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
 
       ## 同步代码
       - name: Sync Code # 名字随便起
         uses: Yikun/hub-mirror-action@master # 使用Yikun/hub-mirror-action
         with:
           src: github/syh-micro-build # 源端账户名(github)
-          dst: gitee/ShanYi-Hui # 目的端账户名(gitee)
+          dst: gitee/shanyi-hui # 目的端账户名(gitee)
           dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # SSH密钥对中的私钥
           dst_token: ${{ secrets.GITEE_TOKEN }} # Gitee账户的私人令牌
           src_account_type: org # 源端账户类型
           dst_account_type: user # 目的端账户类型
-          clone_style: 'https' # 使用https方式进行clone，也可以使用ssh
+          clone_style: 'ssh' # 使用https方式进行clone，也可以使用ssh
           debug: true # 启用后会显示所有执行命令
           force_update: true # 启用后，强制同步，即强制覆盖目的端仓库
           static_list: 'mb-admin' # 静态同步列表，在此填写需要同步的仓库名称，可填写多个
