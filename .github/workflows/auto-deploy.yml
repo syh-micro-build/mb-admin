@@ -102,13 +102,12 @@ jobs:
         env:
           GITEE_RSA_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         run: |
-          echo $GITEE_RSA_PRIVATE_KEY
-          ssh-keygen -l -f $GITEE_RSA_PRIVATE_KEY
           mkdir -p ~/.ssh/
           echo "$GITEE_RSA_PRIVATE_KEY" > ~/.ssh/id_rsa
           cat ~/.ssh/id_rsa
           cat /root/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          chmod 600 /root/.ssh/id_rsa
           ssh-keyscan github.com > ~/.ssh/known_hosts
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
           git config --local user.email "shanyi.hui@qq.com"
