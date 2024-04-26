@@ -98,12 +98,12 @@ jobs:
           # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
           # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
 
-      # 同步代码
+      ## 同步代码
       - name: Sync Code # 名字随便起
         uses: Yikun/hub-mirror-action@master # 使用Yikun/hub-mirror-action
         with:
           src: github/syh-micro-build # 源端账户名(github)
-          dst: gitee/shanyi-hui # 目的端账户名(gitee)
+          dst: gitee/ShanYi-Hui # 目的端账户名(gitee)
           dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # SSH密钥对中的私钥
           dst_token: ${{ secrets.GITEE_TOKEN }} # Gitee账户的私人令牌
           src_account_type: org # 源端账户类型
