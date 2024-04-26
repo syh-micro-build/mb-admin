@@ -98,7 +98,7 @@ jobs:
           # commit-message: ${{ github.event.head_commit.message }} # default: `Deploying to gh-pages from @ 3238feb 🚀`
           # commit-message: "deploy: ${{ github.sha }} (${{ github.event.head_commit.message }}) 🚀 "
 
-      ## 同步代码
+      # 同步代码
       - name: Sync Code # 名字随便起
         uses: Yikun/hub-mirror-action@master # 使用Yikun/hub-mirror-action
         with:
@@ -108,7 +108,7 @@ jobs:
           dst_token: ${{ secrets.GITEE_TOKEN }} # Gitee账户的私人令牌
           src_account_type: org # 源端账户类型
           dst_account_type: user # 目的端账户类型
-          clone_style: 'ssh' # 使用https方式进行clone，也可以使用ssh
+          clone_style: 'https' # 使用https方式进行clone，也可以使用ssh
           debug: true # 启用后会显示所有执行命令
           force_update: true # 启用后，强制同步，即强制覆盖目的端仓库
           static_list: 'mb-admin' # 静态同步列表，在此填写需要同步的仓库名称，可填写多个
