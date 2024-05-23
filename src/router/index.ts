@@ -231,6 +231,14 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
             meta: {
               title: 'JSON编辑器'
             }
+          },
+          {
+            path: 'code-editor',
+            component: () => import('@/views/Components/Editor/CodeEditor.vue'),
+            name: 'CodeEditor',
+            meta: {
+              title: '代码编辑器'
+            }
           }
         ]
       },
