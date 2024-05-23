@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/syh-micro-build/mb-admin/compare/v1.2.0...v1.3.0) (2024-05-23)
+
+
+### 📝  文档更新 | Documentation
+
+* :memo: 添加 在线预览 与 官方文档 的国内版地址 ([0ee3e21](https://github.com/syh-micro-build/mb-admin/commit/0ee3e219bd29696145cadde18c55ebdb69c7f325))
+* :memo: 文档添加生态分栏 ([762ebaf](https://github.com/syh-micro-build/mb-admin/commit/762ebaf1291fac848729d9141780f34cb162d4cc))
+
+
+### 🎡  持续集成 | Continuous Integration
+
+* :ferris_wheel: 代码同步至 Gitee 的 GitHub  Action 更换 ([ac50bb9](https://github.com/syh-micro-build/mb-admin/commit/ac50bb950ede49f4ae01eef0db91005643174932))
+* :ferris_wheel: 设置自定义域名后的构建参数调整 ([af39733](https://github.com/syh-micro-build/mb-admin/commit/af39733903b52b20369acbcc1bab74093dd34651))
+* :ferris_wheel: 添加同步代码至 Gitee 并部署 Gitee pages ([12cffac](https://github.com/syh-micro-build/mb-admin/commit/12cffac320f816940f2c95ddb074c393c81b417b))
+* :ferris_wheel: 添加同步至 Gitee 并自动构建部署至 Gitee pages ([ddf8c73](https://github.com/syh-micro-build/mb-admin/commit/ddf8c73c73e1f171ab901fa8cf7102f10f289335))
+* :ferris_wheel: 文档 与 在线预览 地址更新 ([d93fb89](https://github.com/syh-micro-build/mb-admin/commit/d93fb89c0743c32dd8862eae8e30116bf0c6f85c))
+* :ferris_wheel: gitee 同步报错处理 ([5185390](https://github.com/syh-micro-build/mb-admin/commit/51853902be5ef51b53a9f2cc3860a180471f8449))
+* 仓库私钥调整后的调试 ([908456d](https://github.com/syh-micro-build/mb-admin/commit/908456de62d118238274b82fe98f0e58a0b86283))
+
+
+### ✨  新增功能 | New Feature
+
+* :sparkles: 添加代码编辑器组件 ([eadadd2](https://github.com/syh-micro-build/mb-admin/commit/eadadd208ef62a672deb00fc8e612468028b645b))
+
+
+### 🐛  修复缺陷 | Bug Fixes
+
+* :bug: 表单的 delSchema 方法在调用后未将对应的 field 值删除 ([34fe393](https://github.com/syh-micro-build/mb-admin/commit/34fe3939ee239ba6bd291dd1653f8c564d735f57))
+* :bug: 修复 Transfer 组件 optionApi 不生效 ([36fcea0](https://github.com/syh-micro-build/mb-admin/commit/36fcea0f65d6b905378a5fa2a538433586dd0d5a))
+* :bug: 已经是 FormData 对象的不用再次转换 ([6c334cb](https://github.com/syh-micro-build/mb-admin/commit/6c334cb6409d7aa11d5fdf5922c8f05146d3d7d7))
+
 ## [1.2.0](https://github.com/syh-micro-build/mb-admin/compare/v1.1.1...v1.2.0) (2024-04-07)
 
 
