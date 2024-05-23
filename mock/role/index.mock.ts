@@ -194,6 +194,14 @@ const adminList = [
             meta: {
               title: 'JSON编辑器'
             }
+          },
+          {
+            path: 'code-editor',
+            component: 'views/Components/Editor/CodeEditor',
+            name: 'CodeEditor',
+            meta: {
+              title: '代码编辑器'
+            }
           }
         ]
       },
