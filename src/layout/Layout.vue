@@ -15,6 +15,8 @@ const collapse = computed(() => appStore.getCollapse)
 
 const layout = computed(() => appStore.getLayout)
 
+const hideSetting = computed(() => import.meta.env.VITE_HIDE_GLOBAL_SETTING === 'true')
+
 const handleClickOutside = () => {
   appStore.setCollapse(true)
 }
@@ -58,7 +60,7 @@ export default defineComponent({
 
         <Backtop></Backtop>
 
-        <Setting></Setting>
+        {!unref(hideSetting) && <Setting></Setting>}
       </section>
     )
   }
