@@ -92,7 +92,8 @@ export default defineConfig(({ command, mode }) => {
           }
         }
       },
-      cssCodeSplit: !(env.VITE_USE_CSS_SPLIT === 'false')
+      cssCodeSplit: !(env.VITE_USE_CSS_SPLIT === 'false'),
+      cssTarget: ['chrome31']
     },
     optimizeDeps: {
       include: ['vue-types', '@zxcvbn-ts/core']
