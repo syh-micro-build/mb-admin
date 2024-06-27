@@ -116,7 +116,7 @@ npm run release
 - 项目依赖更新
 
 ```bash
-npx npm-check-updates -i --format
+npx npm-check-updates -i --format group
 ```
 
 ## 更新日志
