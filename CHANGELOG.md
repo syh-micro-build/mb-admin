@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/syh-micro-build/mb-admin/compare/v1.3.0...v1.3.1) (2024-08-16)
+
+
+### ♻️   代码重构 | Code Refactoring
+
+* :recycle: 权限管理=>菜单管理=>按钮权限重构，可以对已添加的权限按钮进行编辑 ([0e2f0a3](https://github.com/syh-micro-build/mb-admin/commit/0e2f0a34a845414de18bb582a979075a6362a7d4))
+
+
+### 💄  代码格式 | Styles
+
+* **ui:** :lipstick: 修改登录页样式 ([ed048b2](https://github.com/syh-micro-build/mb-admin/commit/ed048b2e15957c189643e67bda2696efda7216d7))
+
+
+### 📦️   构建相关 | Builds
+
+* **ui:** :package: 新增VITE_HIDE_GLOBAL_SETTING配置，控制全局设置按钮是否隐藏 ([40079fa](https://github.com/syh-micro-build/mb-admin/commit/40079fad074817a793089fc27c239be9f24d17a9))
+
+
+### 📝  文档更新 | Documentation
+
+* :memo: 项目依赖更新命令优化 ([1ed3b78](https://github.com/syh-micro-build/mb-admin/commit/1ed3b787ca860bbc02adf47b77a0b06b1f98b2d6))
+
+
+### 🐛  修复缺陷 | Bug Fixes
+
+* :bug: 查询界面：收起和展开功能bug ([180ae87](https://github.com/syh-micro-build/mb-admin/commit/180ae87c8c456fbb1d953ed8d2f7ed26e5eee756))
+* :bug: 静态路由添加代码编辑器菜单 ([4e8cec5](https://github.com/syh-micro-build/mb-admin/commit/4e8cec572a83fbdbf40b905e05ccc37ce4d75833))
+* :bug: 权限管理=>菜单管理=>编辑菜单名称等需要链表meta的内容失效 ([3b8f425](https://github.com/syh-micro-build/mb-admin/commit/3b8f425508d7f20005a83d0a958061a30ebaf14e))
+* :bug: 删除无用代码 ([e861608](https://github.com/syh-micro-build/mb-admin/commit/e861608b3db3e9b63b9139230c85dbd488c50c18))
+* :bug: 设置了showExpand参数 会把index在expandField之前不应该显示出来的field也显示出来了 ([e1f897d](https://github.com/syh-micro-build/mb-admin/commit/e1f897d93bbb65f22e8a1d71809092b0d4595545))
+* :bug: 修复 search组件的收起展开 和重置 Bug ([1f1d7de](https://github.com/syh-micro-build/mb-admin/commit/1f1d7de0aa7ef77f0b421e06ead197b6e7ad50b1)), closes [element-plus/element-plus#15417](https://github.com/element-plus/element-plus/issues/15417)
+* :bug: 修复表格合计报错问题 ([c655733](https://github.com/syh-micro-build/mb-admin/commit/c655733139ce2dc8c97565cc10d2a94e36591988))
+* :bug: 修复表格default-expand-all属性无效BUG ([71b38f8](https://github.com/syh-micro-build/mb-admin/commit/71b38f8ea8225785ebe9296d998358dc65cd8e73))
+* :bug: 修复富文本编辑器初始化时, 报错 Error: Cannot find a descendant at path [0,1] in node ([4cde358](https://github.com/syh-micro-build/mb-admin/commit/4cde35896afee8d9b0d6716e74139a453abf61d6))
+* :bug: 修复权限管理=>菜单管理=>编辑弹窗中新增按钮权限时 id 缺失导致前端判断错误问题 ([e340785](https://github.com/syh-micro-build/mb-admin/commit/e3407852cfafdb03f798ba63b167857efa52baa2))
+* :bug: 修复在表格中给按钮添加link属性后，字体颜色变成白色 ([c43c2d7](https://github.com/syh-micro-build/mb-admin/commit/c43c2d7cb99e0f8dd90306671795975b3e0b42fa))
+* :bug: 修复css前缀无法应用问题 ([42a400c](https://github.com/syh-micro-build/mb-admin/commit/42a400cb5493c808d8e43dda91f67bcb4016566e))
+* :bug: 左侧菜单收起后，组件菜单的子菜单显示不全 ([35e83bf](https://github.com/syh-micro-build/mb-admin/commit/35e83bff6146207a7215cb94c1447e1716ffae04))
+* :bug: optionApi方法重复执行，导致接口重复调用 ([c60b8a3](https://github.com/syh-micro-build/mb-admin/commit/c60b8a32254dfe5364eca35cb77ef3ff7dec7826))
+
+
+### 🔨  其他修改 | Chore
+
+* :hammer: 更新依赖 ([f394b8f](https://github.com/syh-micro-build/mb-admin/commit/f394b8f465bc48b9fdf25dfa60f8becd0c31f3fe))
+* :hammer: 更新依赖 ([ccec2c7](https://github.com/syh-micro-build/mb-admin/commit/ccec2c7b26010bba5829b87a908b491a7735de9c))
+* :hammer: 更新注释 ([6858c07](https://github.com/syh-micro-build/mb-admin/commit/6858c0787339fb0a59483287d86f4918ae642f97))
+* **release:** 1.3.0 ([d25b57b](https://github.com/syh-micro-build/mb-admin/commit/d25b57b8f376b6929afe3ffdbf62bed3c39e0506))
+
 ## [1.3.0](https://github.com/syh-micro-build/mb-admin/compare/v1.2.0...v1.3.0) (2024-05-23)
 
 
