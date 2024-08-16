@@ -34,8 +34,9 @@ export const useRenderMenuItem = (
           return (
             <ElSubMenu
               index={fullPath}
+              teleported
               popperClass={
-                menuMode === 'vertical' ? `menu-popper--vertical` : `menu-popper--horizontal`
+                menuMode === 'vertical' ? `submenu-popper--vertical` : `submenu-popper--horizontal`
               }
             >
               {{
