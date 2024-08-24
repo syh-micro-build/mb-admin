@@ -198,10 +198,11 @@ export const treeMapEach = (
  * @param parentNode 父节点
  */
 export const eachTree = (treeDatas: any[], callBack: Fn, parentNode = {}) => {
-  treeDatas.forEach((element) => {
-    const newNode = callBack(element, parentNode) || element
-    if (element.children) {
-      eachTree(element.children, callBack, newNode)
-    }
-  })
+  treeDatas &&
+    treeDatas.forEach((element) => {
+      const newNode = callBack(element, parentNode) || element
+      if (element.children) {
+        eachTree(element.children, callBack, newNode)
+      }
+    })
 }
