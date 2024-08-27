@@ -59,6 +59,14 @@ useEventBus({
   }
 })
 
+const renderImportance = (data: any) => {
+  return (
+    <ElTag type={data.importance === 1 ? 'success' : data.importance === 2 ? 'warning' : 'danger'}>
+      {data.importance === 1 ? '重要' : data.importance === 2 ? '良好' : '	一般'}
+    </ElTag>
+  )
+}
+
 const crudSchemas = reactive<CrudSchema[]>([
   {
     field: 'selection',
@@ -157,15 +165,14 @@ const crudSchemas = reactive<CrudSchema[]>([
     detail: {
       slots: {
         default: (data: any) => {
-          return (
-            <ElTag
-              type={
-                data.importance === 1 ? 'success' : data.importance === 2 ? 'warning' : 'danger'
-              }
-            >
-              {data.importance === 1 ? '重要' : data.importance === 2 ? '良好' : '	一般'}
-            </ElTag>
-          )
+          return renderImportance(data)
+        }
+      }
+    },
+    table: {
+      slots: {
+        default: (data: any) => {
+          return renderImportance(data.row)
         }
       }
     }
@@ -188,7 +195,7 @@ const crudSchemas = reactive<CrudSchema[]>([
       hidden: true
     },
     table: {
-      show: false
+      hidden: true
     },
     form: {
       component: 'Editor',
