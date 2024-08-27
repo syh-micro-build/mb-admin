@@ -195,7 +195,7 @@ const crudSchemas = reactive<CrudSchema[]>([
       hidden: true
     },
     table: {
-      hidden: false
+      hidden: true
     },
     form: {
       component: 'Editor',
