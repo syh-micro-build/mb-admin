@@ -57,4 +57,3 @@ const save = async () => {
     </template>
   </ContentDetailWrap>
 </template>
-@/hooks/event/useEventBus

@@ -41,13 +41,6 @@ const sizeChange = (show: string | number | boolean) => {
   appStore.setSize(show as boolean)
 }
 
-// 多语言图标
-const locale = ref(appStore.getLocale)
-
-const localeChange = (show: string | number | boolean) => {
-  appStore.setLocale(show as boolean)
-}
-
 // 标签页
 const tagsView = ref(appStore.getTagsView)
 
@@ -159,11 +152,6 @@ watch(
     <div class="flex justify-between items-center">
       <span class="text-14px">尺寸图标</span>
       <ElSwitch v-model="size" @change="sizeChange" />
-    </div>
-
-    <div class="flex justify-between items-center">
-      <span class="text-14px">多语言图标</span>
-      <ElSwitch v-model="locale" @change="localeChange" />
     </div>
 
     <div class="flex justify-between items-center">

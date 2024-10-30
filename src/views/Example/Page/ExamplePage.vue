@@ -285,4 +285,3 @@ const action = (row: TableData, type: string) => {
     />
   </ContentWrap>
 </template>
-@/hooks/event/useEventBus

@@ -14,7 +14,6 @@ interface AppState {
   hamburger: boolean
   screenfull: boolean
   size: boolean
-  locale: boolean
   tagsView: boolean
   tagsViewIcon: boolean
   logo: boolean
@@ -48,7 +47,6 @@ export const useAppStore = defineStore('app', {
       hamburger: true, // 折叠图标
       screenfull: true, // 全屏图标
       size: true, // 尺寸图标
-      locale: true, // 多语言图标
       tagsView: true, // 标签页
       tagsViewIcon: true, // 是否显示标签图标
       logo: true, // logo
@@ -115,9 +113,6 @@ export const useAppStore = defineStore('app', {
     },
     getSize(): boolean {
       return this.size
-    },
-    getLocale(): boolean {
-      return this.locale
     },
     getTagsView(): boolean {
       return this.tagsView
@@ -192,9 +187,6 @@ export const useAppStore = defineStore('app', {
     },
     setSize(size: boolean) {
       this.size = size
-    },
-    setLocale(locale: boolean) {
-      this.locale = locale
     },
     setTagsView(tagsView: boolean) {
       this.tagsView = tagsView
