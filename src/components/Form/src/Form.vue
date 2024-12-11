@@ -40,7 +40,6 @@ const { renderRadioOptions } = useRenderRadio()
 const { renderCheckboxOptions } = useRenderCheckbox()
 
 export default defineComponent({
-  // eslint-disable-next-line vue/no-reserved-component-names
   name: 'Form',
   props: {
     // 生成Form的布局结构数组

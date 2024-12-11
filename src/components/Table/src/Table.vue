@@ -30,7 +30,6 @@ import { Icon } from '@/components/Icon'
 import { BaseButton } from '@/components/Button'
 
 export default defineComponent({
-  // eslint-disable-next-line vue/no-reserved-component-names
   name: 'Table',
   props: {
     pageSize: propTypes.number.def(10),

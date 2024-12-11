@@ -65,7 +65,7 @@ const getTeam = async () => {
 }
 
 // 获取指数
-let radarOptionData = reactive<EChartsOption>(radarOption) as EChartsOption
+const radarOptionData = reactive<EChartsOption>(radarOption) as EChartsOption
 
 const getRadar = async () => {
   const res = await getRadarApi().catch(() => {})

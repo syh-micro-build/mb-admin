@@ -8,7 +8,6 @@ import { useRouter } from 'vue-router'
 import { isUrl } from '@/utils/is'
 
 export default defineComponent({
-  // eslint-disable-next-line vue/no-reserved-component-names
   name: 'Menu',
   props: {
     menuSelect: {

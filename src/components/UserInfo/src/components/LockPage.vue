@@ -31,7 +31,7 @@ async function unLock() {
   if (!password.value) {
     return
   }
-  let pwd = password.value
+  const pwd = password.value
   try {
     loading.value = true
     const res = await lockStore.unLock(pwd)

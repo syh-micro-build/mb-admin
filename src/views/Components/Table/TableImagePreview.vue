@@ -47,7 +47,7 @@ const columns: TableColumn[] = [
 
 const loading = ref(true)
 
-let tableDataList = ref<TableData[]>([])
+const tableDataList = ref<TableData[]>([])
 
 const getTableList = async (params?: Params) => {
   const res = await getTableListApi(

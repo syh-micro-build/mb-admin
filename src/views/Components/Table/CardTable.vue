@@ -12,7 +12,7 @@ interface Params {
 
 const loading = ref(true)
 
-let tableDataList = ref<any[]>([])
+const tableDataList = ref<any[]>([])
 
 const getTableList = async (params?: Params) => {
   const res = await getCardTableListApi(

@@ -13,7 +13,6 @@ export const useRenderCheckbox = () => {
       item.component === ComponentNameEnum.CHECKBOX_GROUP ? ElCheckbox : ElCheckboxButton
     ) as ReturnType<typeof defineComponent>
     return componentProps?.options?.map((option) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { ...other } = option
       return (
         <Com

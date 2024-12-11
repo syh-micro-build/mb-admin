@@ -72,7 +72,6 @@ const service = {
     }
   },
   cancelAllRequest() {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     for (const [_, controller] of abortControllerMap) {
       controller.abort()
     }

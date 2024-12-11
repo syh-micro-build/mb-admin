@@ -39,7 +39,6 @@ export const useValidator = () => {
   const notSpecialCharacters = (message?: string): FormItemRule => {
     return {
       validator: (_, val, callback) => {
-        // eslint-disable-next-line no-useless-escape
         if (/[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/gi.test(val)) {
           callback(new Error(message || '不能包含特殊字符'))
         } else {

@@ -137,7 +137,7 @@ export interface SelectComponentProps extends Omit<Partial<ISelectProps>, 'optio
     children?: string
   }
   on?: {
-    change?: (value: string | number | boolean | Object) => void
+    change?: (value: string | number | boolean | object) => void
     visibleChange?: (visible: boolean) => void
     removeTag?: (tag: any) => void
     clear?: () => void
@@ -185,7 +185,7 @@ export interface SelectV2ComponentProps {
   placement?: AutocompleteProps['placement']
   collapseTagsTooltip?: boolean
   on?: {
-    change?: (value: string | number | boolean | Object) => void
+    change?: (value: string | number | boolean | object) => void
     visibleChange?: (visible: boolean) => void
     removeTag?: (tag: any) => void
     clear?: () => void
@@ -555,7 +555,7 @@ export interface TreeSelectComponentProps
   allowDrag?: (...args: any[]) => boolean
   allowDrop?: (...args: any[]) => boolean
   on?: {
-    change?: (value: string | number | boolean | Object) => void
+    change?: (value: string | number | boolean | object) => void
     visibleChange?: (visible: boolean) => void
     removeTag?: (tag: any) => void
     clear?: () => void

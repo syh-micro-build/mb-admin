@@ -13,7 +13,6 @@ export const useRenderRadio = () => {
       item.component === ComponentNameEnum.RADIO_GROUP ? ElRadio : ElRadioButton
     ) as ReturnType<typeof defineComponent>
     return componentProps?.options?.map((option) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { ...other } = option
       return (
         <Com

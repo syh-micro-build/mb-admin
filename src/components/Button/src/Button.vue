@@ -49,11 +49,11 @@ const props = defineProps({
     default: false
   },
   loadingIcon: {
-    type: [String, Object] as PropType<String | Component>,
+    type: [String, Object] as PropType<string | Component>,
     default: undefined
   },
   icon: {
-    type: [String, Object] as PropType<String | Component>,
+    type: [String, Object] as PropType<string | Component>,
     default: undefined
   },
   autofocus: {
@@ -77,7 +77,7 @@ const props = defineProps({
     default: false
   },
   tag: {
-    type: [String, Object] as PropType<String | Component>,
+    type: [String, Object] as PropType<string | Component>,
     default: 'button'
   }
 })

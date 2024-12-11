@@ -1,4 +1,3 @@
-/* eslint-disable no-empty-pattern */
 // uno.config.ts
 import { defineConfig, toEscapedSelector as e, presetUno, presetIcons } from 'unocss'
 import transformerVariantGroup from '@unocss/transformer-variant-group'

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus'
-import { type PropType, ref } from 'vue'
+import { type PropType, ref, type ComponentPublicInstance } from 'vue'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
 import type { ContextMenuSchema } from './types'
 
@@ -29,7 +29,7 @@ const visibleChange = (visible: boolean) => {
   emit('visibleChange', visible, props.tagItem)
 }
 
-const elDropdownMenuRef = ref<ComponentRef<typeof ElDropdown>>()
+const elDropdownMenuRef = ref<ComponentPublicInstance<typeof ElDropdown> | null>(null)
 
 defineExpose({
   elDropdownMenuRef,
