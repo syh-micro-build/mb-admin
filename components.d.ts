@@ -43,6 +43,7 @@ declare module 'vue' {
     Menu: typeof import('./src/components/Menu/src/Menu.vue')['default']
     Permission: typeof import('./src/components/Permission/src/Permission.vue')['default']
     Qrcode: typeof import('./src/components/Qrcode/src/Qrcode.vue')['default']
+    ResizeDialog: typeof import('./src/components/Dialog/src/ResizeDialog.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Screenfull: typeof import('./src/components/Screenfull/src/Screenfull.vue')['default']

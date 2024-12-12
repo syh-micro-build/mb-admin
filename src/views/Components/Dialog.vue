@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ContentWrap } from '@/components/ContentWrap'
 import { Dialog } from '@/components/Dialog'
+import ResizeDialog from '@/components/Dialog/src/ResizeDialog.vue'
 import { BaseButton } from '@/components/Button'
 import { ref, reactive } from 'vue'
 import { Form, type FormSchema } from '@/components/Form'
@@ -14,6 +15,10 @@ const { required } = useValidator()
 const dialogVisible = ref(false)
 
 const dialogVisible2 = ref(false)
+
+const dialogVisible3 = ref(false)
+
+const dialogVisible4 = ref(false)
 
 const { formRegister, formMethods } = useForm()
 const { getElFormExpose } = formMethods
@@ -121,5 +126,30 @@ const formSubmit = async () => {
         <BaseButton @click="dialogVisible2 = false">关闭</BaseButton>
       </template>
     </Dialog>
+  </ContentWrap>
+
+  <ContentWrap
+    class="mt-10px"
+    title="可自定义调节弹窗大小的弹窗"
+    message="基于 ElementPlus 的 Dialog 组件二次封装"
+  >
+    <BaseButton type="primary" @click="dialogVisible3 = !dialogVisible3"> 打开 </BaseButton>
+
+    <BaseButton type="primary" @click="dialogVisible4 = !dialogVisible4"> 与表单结合 </BaseButton>
+
+    <ResizeDialog v-model="dialogVisible3" title="弹窗">
+      <Echart />
+      <template #footer>
+        <BaseButton @click="dialogVisible3 = false">关闭</BaseButton>
+      </template>
+    </ResizeDialog>
+
+    <ResizeDialog v-model="dialogVisible4" title="弹窗">
+      <Form :schema="schema" @register="formRegister" />
+      <template #footer>
+        <BaseButton type="primary" @click="formSubmit">提交</BaseButton>
+        <BaseButton @click="dialogVisible4 = false">关闭</BaseButton>
+      </template>
+    </ResizeDialog>
   </ContentWrap>
 </template>
