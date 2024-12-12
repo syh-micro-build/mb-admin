@@ -70,9 +70,5 @@ export default defineComponent({
 <style lang="less" scoped>
 .layout {
   background-color: var(--app-content-bg-color);
-
-  :deep(.el-scrollbar__view) {
-    height: 100% !important;
-  }
 }
 </style>
