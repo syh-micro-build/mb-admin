@@ -412,7 +412,7 @@ watch(
           label: '关闭标签页',
           disabled: !!visitedViews?.length && selectedTag?.meta.affix,
           command: () => {
-            closeSelectedTag(selectedTag!)
+            selectedTag && closeSelectedTag(selectedTag)
           }
         },
         {
@@ -500,7 +500,7 @@ watch(
 
   &__item {
     position: relative;
-    top: 2px;
+    top: 3px;
     height: calc(~'100% - 6px');
     padding-right: 25px;
     margin-left: 4px;

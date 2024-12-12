@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* prettier-ignore */
 // @ts-nocheck
 // noinspection JSUnusedGlobalSymbols
