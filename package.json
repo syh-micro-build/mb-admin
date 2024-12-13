@@ -6,7 +6,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "vite --mode base",
+    "dev": "vite --mode base --host",
     "build": "run-p type-check \"build-only -- --mode {1}\" --",
     "preview": "vite preview --mode",
     "build-only": "vite build",
