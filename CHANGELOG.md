@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/syh-micro-build/mb-admin/compare/v1.3.1...v1.4.0) (2024-12-13)
+
+
+### 🔨  其他修改 | Chore
+
+* :hammer: 更新依赖，重大更新 ([6441b21](https://github.com/syh-micro-build/mb-admin/commit/6441b2197a16594cb9e7ecc5c3b4a81685f93a12))
+* **release:** 1.3.1 ([a39a1bc](https://github.com/syh-micro-build/mb-admin/commit/a39a1bced408dd9ae7054ae64d9fb300b2ef8b19))
+
+
+### ⚡️  性能提升 | Performance Improvements
+
+* **ui:** :zap: 全局默认box-sizing: border-box;降低元素布局难度 ([b8e7574](https://github.com/syh-micro-build/mb-admin/commit/b8e7574839039b3a2b6f14da41dff9a01790d5c3))
+* **ui:** :zap: 移除scrollbar__view高度限定 ([7b04a6a](https://github.com/syh-micro-build/mb-admin/commit/7b04a6a0c5d7df81ede15da1f7af5df53094fb3f))
+
+
+### ✨  新增功能 | New Feature
+
+* :sparkles: 添加本地调试时，输出局域网服务 ([7f7ab6e](https://github.com/syh-micro-build/mb-admin/commit/7f7ab6eaef089655c9640cb88dfdf7c506350905))
+* :sparkles: 添加树形控件，支持右键自定义菜单进行节点编辑 ([bd19760](https://github.com/syh-micro-build/mb-admin/commit/bd19760c88ae6c457664fd2db1ec1c32027e43e8))
+* **ui:** :sparkles: 添加自定义尺寸弹窗 ([d6a2123](https://github.com/syh-micro-build/mb-admin/commit/d6a21235f92422dd90ae09817be79d5246f7bf2a))
+
+
+### 🐛  修复缺陷 | Bug Fixes
+
+* :bug: 当前页不为1时，修改页数后会导致多次调用getList方法问题 ([c89e81c](https://github.com/syh-micro-build/mb-admin/commit/c89e81c8bd27b8528f0693d469fa8574c08a746d))
+* :bug: 解决@vue/eslint-config-typescript中eslint版本与项目中eslint版本不兼容的问题 ([2408e8c](https://github.com/syh-micro-build/mb-admin/commit/2408e8c58a5f6b9896a173f3f2278ec281a446c6))
+* :bug: 提高"initModel判断schema对应的field是否存在,兼容null与0等场景"代码健壮性 ([35920af](https://github.com/syh-micro-build/mb-admin/commit/35920af91d0b4d361a2f964dc588881738bbc717))
+* :bug: 修复isUrl判断错误bug ([2030d7c](https://github.com/syh-micro-build/mb-admin/commit/2030d7c1fdd0f48be63b97af80d544d71eac4ae9))
+* :bug: initModel判断schema对应的field是否存在,兼容null与0等场景 ([5db1c4e](https://github.com/syh-micro-build/mb-admin/commit/5db1c4e8b89a77a80fae4e9eae15f764d768e7c8))
+* :bug: videoPlayer 的实例未赋值 ([fbd84c6](https://github.com/syh-micro-build/mb-admin/commit/fbd84c617cde1f1663f0d3c785439ab27314259b))
+
 ### [1.3.1](https://github.com/syh-micro-build/mb-admin/compare/v1.3.0...v1.3.1) (2024-08-16)
 
 
