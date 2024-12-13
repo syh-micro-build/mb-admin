@@ -17,6 +17,7 @@
     "test:unit": "vitest",
     "prepare": "husky",
     "plop": "plop",
+    "npm-check": "npx npm-check-updates -i --format group",
     "release": "standard-version"
   },
   "dependencies": {
