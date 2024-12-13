@@ -28,11 +28,13 @@ export const useTable = (config: UseTableConfig) => {
   const pageSize = ref(10)
   const total = ref(0)
   const dataList = ref<any[]>([])
+  let isPageSizeChange = false
 
   watch(
     () => currentPage.value,
     () => {
-      methods.getList()
+      if (!isPageSizeChange) methods.getList()
+      isPageSizeChange = false
     }
   )
 
@@ -44,6 +46,7 @@ export const useTable = (config: UseTableConfig) => {
         methods.getList()
       } else {
         currentPage.value = 1
+        isPageSizeChange = true
         methods.getList()
       }
     }
