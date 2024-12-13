@@ -55,6 +55,7 @@ declare module 'vue' {
     TabMenu: typeof import('./src/components/TabMenu/src/TabMenu.vue')['default']
     TagsView: typeof import('./src/components/TagsView/src/TagsView.vue')['default']
     ThemeSwitch: typeof import('./src/components/ThemeSwitch/src/ThemeSwitch.vue')['default']
+    Tree: typeof import('./src/components/Tree/src/Tree.vue')['default']
     UserInfo: typeof import('./src/components/UserInfo/src/UserInfo.vue')['default']
     VideoPlayer: typeof import('./src/components/VideoPlayer/src/VideoPlayer.vue')['default']
     VideoPlayerViewer: typeof import('./src/components/VideoPlayerViewer/src/VideoPlayerViewer.vue')['default']

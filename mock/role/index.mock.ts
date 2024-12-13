@@ -324,6 +324,14 @@ const adminList = [
         meta: {
           title: '视频播放器'
         }
+      },
+      {
+        path: 'tree',
+        component: 'views/Components/Tree',
+        name: 'Tree',
+        meta: {
+          title: '树形控件'
+        }
       }
     ]
   },

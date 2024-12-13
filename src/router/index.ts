@@ -361,6 +361,14 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
         meta: {
           title: '视频播放器'
         }
+      },
+      {
+        path: 'tree',
+        component: () => import('@/views/Components/Tree.vue'),
+        name: 'Tree',
+        meta: {
+          title: '树形控件'
+        }
       }
     ]
   },
