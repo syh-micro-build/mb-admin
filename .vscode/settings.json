@@ -4,9 +4,9 @@
   "explorer.fileNesting.patterns": {
     ".env.dev": "$(capture).env.*",
     "README.md": "README*,CHANGELOG*,LICENSE,CNAME",
-    "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitattributes,.gitignore,.gitpod.yml,.npmrc,.browserslistrc,.node-version,.git*,.tazerc.json,package-lock.json,plopfile.js",
+    "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitignore,.npmrc,.browserslistrc,package-lock.json,plopfile.js,index.html",
     "eslint.config.js": ".commitlintrc.cjs,.stylelintrc.json,.lintstagedrc,.versionrc,.prettierrc.json",
     "env.d.ts": "auto-imports.d.ts, components.d.ts",
-    "vite.config.ts": "vitest.config.ts"
+    "vite.config.ts": "vitest.config.ts,uno.config.ts"
   }
 }
