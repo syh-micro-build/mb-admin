@@ -1,0 +1,12 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".env.dev": "$(capture).env.*",
+    "README.md": "README*,CHANGELOG*,LICENSE,CNAME",
+    "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitattributes,.gitignore,.gitpod.yml,.npmrc,.browserslistrc,.node-version,.git*,.tazerc.json,package-lock.json,plopfile.js",
+    "eslint.config.js": ".commitlintrc.cjs,.stylelintrc.json,.lintstagedrc,.versionrc,.prettierrc.json",
+    "env.d.ts": "auto-imports.d.ts, components.d.ts",
+    "vite.config.ts": "vitest.config.ts"
+  }
+}
