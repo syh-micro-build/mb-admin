@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Dialog } from '@/components/Dialog'
 import { Form } from '@/components/Form'
 import { useForm } from '@/hooks/web/useForm'
@@ -29,6 +29,20 @@ const dialogVisible = computed({
   }
 })
 
+//  自动聚焦输入框
+watch(
+  dialogVisible,
+  async (val) => {
+    if (val) {
+      const formExposeInput = await getComponentExpose('password')
+      setTimeout(() => {
+        formExposeInput?.focus()
+      }, 10)
+    }
+  },
+  { immediate: true }
+)
+
 const dialogTitle = ref('锁定屏幕')
 
 const rules = reactive({
@@ -42,14 +56,20 @@ const schema: FormSchema[] = reactive([
     component: 'Input',
     componentProps: {
       type: 'password',
-      showPassword: true
+      showPassword: true,
+      // 按下enter键触发登录
+      onKeydown: (_e: any) => {
+        if (_e.key === 'Enter') {
+          handleLock()
+        }
+      }
     }
   }
 ])
 
 const { formRegister, formMethods } = useForm()
 
-const { getFormData, getElFormExpose } = formMethods
+const { getFormData, getElFormExpose, getComponentExpose } = formMethods
 
 const handleLock = async () => {
   const formExpose = await getElFormExpose()

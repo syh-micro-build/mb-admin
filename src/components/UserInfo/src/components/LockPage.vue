@@ -53,8 +53,15 @@ async function goLogin() {
   }
 }
 
+const passwordInputRef = ref<ComponentRef<typeof ElInput>>()
+
 function handleShowForm(show = false) {
   showDate.value = show
+  if (!show) {
+    requestAnimationFrame(() => {
+      passwordInputRef.value?.focus()
+    })
+  }
 }
 </script>
 
@@ -93,6 +100,8 @@ function handleShowForm(show = false) {
             placeholder="请输入锁屏密码"
             class="enter-x"
             v-model="password"
+            @keydown.enter="unLock"
+            ref="passwordInputRef"
           />
           <span :class="`text-14px lock-page-entry__err-msg enter-x`" v-if="errMsg">
             锁屏密码错误
