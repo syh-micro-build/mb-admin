@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { useAppStore } from '@/stores/app'
 import { ElSwitch } from 'element-plus'
 import { useIcon } from '@/hooks/web/useIcon'
+import { getCssVar } from '@/utils'
 
 const emit = defineEmits(['change'])
 
@@ -13,15 +14,21 @@ const CrescentMoon = useIcon({ icon: 'emojione-monotone:crescent-moon', color: '
 const appStore = useAppStore()
 
 // 初始化获取是否是暗黑主题
-const isDark = ref(appStore.getIsDark)
+const isDark = computed({
+  get() {
+    return appStore.getIsDark
+  },
+  set(val: boolean) {
+    appStore.setIsDark(val)
+    const color = getCssVar('--el-bg-color')
+    appStore.setMenuTheme(color)
+    appStore.setHeaderTheme(color)
+    emit('change', val)
+  }
+})
 
 // 设置switch的背景颜色
 const blackColor = 'var(--el-color-black)'
-
-const themeChange = (val: string | number | boolean) => {
-  appStore.setIsDark(val as boolean)
-  emit('change', val)
-}
 </script>
 
 <template>
@@ -34,7 +41,6 @@ const themeChange = (val: string | number | boolean) => {
     :active-color="blackColor"
     :active-icon="Sun"
     :inactive-icon="CrescentMoon"
-    @change="themeChange"
   />
 </template>
 

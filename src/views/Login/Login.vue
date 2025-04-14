@@ -5,7 +5,6 @@ import { ThemeSwitch } from '@/components/ThemeSwitch'
 import { computed, ref } from 'vue'
 import { ElScrollbar } from 'element-plus'
 import { useAppStore } from '@/stores/app'
-import { getCssVar } from '@/utils'
 
 const appStore = useAppStore()
 
@@ -19,12 +18,6 @@ const toRegister = () => {
 
 const toLogin = () => {
   isLogin.value = true
-}
-
-const themeChange = () => {
-  const color = getCssVar('--el-bg-color')
-  appStore.setMenuTheme(color)
-  appStore.setHeaderTheme(color)
 }
 </script>
 
@@ -63,7 +56,7 @@ const themeChange = () => {
             </div>
 
             <div class="flex justify-end items-center space-x-10px">
-              <ThemeSwitch @change="themeChange" />
+              <ThemeSwitch />
             </div>
           </div>
           <Transition appear enter-active-class="animate__animated animate__bounceInRight">
