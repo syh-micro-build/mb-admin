@@ -1,1 +1,0 @@
-import{_ as o}from"./Detail.vue_vue_type_script_setup_true_lang-CcebWNNX.js";import"./Descriptions-DhUjL8xL.js";import"./vue-chunks-DjkM_pWB.js";import"./index-csGtnT1a.js";import"./element-plus-ByljZuZM.js";/* empty css                  *//* empty css               */import"./Icon-DIXPgZOm.js";/* empty css               */export{o as default};
