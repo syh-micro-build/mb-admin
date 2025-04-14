@@ -53,7 +53,7 @@ const confirm = () => {
   const newColumns = cloneDeep(unref(settingColumns))?.map((item) => {
     const fixed = unref(settingColumns)?.find((col) => col.field === item.field)?.fixed
     item.hidden = !unref(checkColumns)?.includes(item.field)
-    item.fixed = fixed ? fixed : undefined
+    item.fixed = fixed ? fixed : false
     return item
   })
   emit('confirm', [...unref(hiddenColumns), ...(newColumns || [])])
@@ -67,7 +67,7 @@ const restore = () => {
 const initColumns = (columns: TableColumn[], isReStore = false) => {
   const newColumns = columns?.filter((item) => {
     if (!isReStore) {
-      item.fixed = item.fixed !== void 0 ? item.fixed : undefined
+      item.fixed = item.fixed !== void 0 ? item.fixed : false
     }
     return (item.type && !DEFAULT_FILTER_COLUMN.includes(item.type)) || !item.type
   })
@@ -135,18 +135,18 @@ watch(
               :key="item.field"
               class="flex items-center justify-between mt-12px"
             >
-              <ElCheckbox :label="item.field">
+              <ElCheckbox :value="item.field">
                 {{ item.label }}
               </ElCheckbox>
               <div class="flex items-center">
                 <ElRadioGroup size="small" v-model="item.fixed">
-                  <ElRadioButton label="left">
+                  <ElRadioButton value="left">
                     <Icon icon="ep:arrow-left" />
                   </ElRadioButton>
-                  <ElRadioButton :label="undefined">
+                  <ElRadioButton :value="false">
                     <Icon icon="ep:close" />
                   </ElRadioButton>
-                  <ElRadioButton label="right">
+                  <ElRadioButton value="right">
                     <Icon icon="ep:arrow-right" />
                   </ElRadioButton>
                 </ElRadioGroup>
