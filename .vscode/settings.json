@@ -8,5 +8,14 @@
     "eslint.config.js": ".commitlintrc.cjs,.stylelintrc.json,.lintstagedrc,.versionrc,.prettierrc.json",
     "env.d.ts": "auto-imports.d.ts, components.d.ts",
     "vite.config.ts": "vitest.config.ts,uno.config.ts"
-  }
+  },
+  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.namespace": false,
+  "i18n-ally.enabledParsers": ["ts"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.enabledFrameworks": ["vue", "react"],
+  "vue-i18n.i18nPaths": "src/locales"
 }

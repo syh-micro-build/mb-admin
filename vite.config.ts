@@ -11,6 +11,7 @@ import UnoCSS from 'unocss/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { createStyleImportPlugin, ElementPlusResolve } from 'vite-plugin-style-import'
 import { viteMockServe } from 'vite-plugin-mock'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { ViteEjsPlugin } from 'vite-plugin-ejs'
 import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -47,6 +48,11 @@ export default defineConfig(({ command, mode }) => {
             ]
           })
         : undefined,
+      VueI18nPlugin({
+        runtimeOnly: true,
+        compositionOnly: true,
+        include: [path.resolve(__dirname, 'src/locales/**')]
+      }),
       createSvgIconsPlugin({
         iconDirs: [path.resolve(process.cwd(), 'src/assets/svgs')],
         symbolId: 'icon-[dir]-[name]',
@@ -72,7 +78,8 @@ export default defineConfig(({ command, mode }) => {
     ],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
       }
     },
     esbuild: {
@@ -87,7 +94,7 @@ export default defineConfig(({ command, mode }) => {
         plugins: env.VITE_USE_BUNDLE_ANALYZER === 'true' ? [visualizer()] : undefined,
         output: {
           manualChunks: {
-            'vue-chunks': ['vue', 'vue-router', 'pinia'],
+            'vue-chunks': ['vue', 'vue-router', 'pinia', 'vue-i18n'],
             'element-plus': ['element-plus'],
             'wang-editor': ['@wangeditor/editor', '@wangeditor/editor-for-vue'],
             echarts: ['echarts', 'echarts-wordcloud']

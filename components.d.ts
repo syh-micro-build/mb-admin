@@ -37,6 +37,7 @@ declare module 'vue' {
     InterfaceDisplay: typeof import('./src/components/Setting/src/components/InterfaceDisplay.vue')['default']
     JsonEditor: typeof import('./src/components/JsonEditor/src/JsonEditor.vue')['default']
     LayoutRadioPicker: typeof import('./src/components/Setting/src/components/LayoutRadioPicker.vue')['default']
+    LocaleDropdown: typeof import('./src/components/LocaleDropdown/src/LocaleDropdown.vue')['default']
     LockDialog: typeof import('./src/components/UserInfo/src/components/LockDialog.vue')['default']
     LockPage: typeof import('./src/components/UserInfo/src/components/LockPage.vue')['default']
     Logo: typeof import('./src/components/Logo/src/Logo.vue')['default']

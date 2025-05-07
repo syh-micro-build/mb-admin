@@ -4,6 +4,7 @@ import 'virtual:svg-icons-register'
 
 import { createApp } from 'vue'
 
+import { setupI18n } from '@/plugins/vueI18n'
 import { setupStore } from '@/stores'
 import App from './App.vue'
 import router from './router'
@@ -13,6 +14,7 @@ import './permission'
 
 const app = createApp(App)
 
+setupI18n(app)
 setupStore(app)
 setupElementPlus(app)
 setupPermission(app)

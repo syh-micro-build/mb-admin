@@ -2,11 +2,15 @@
 import LoginForm from './components/LoginForm.vue'
 import RegisterForm from './components/RegisterForm.vue'
 import { ThemeSwitch } from '@/components/ThemeSwitch'
+import { LocaleDropdown } from '@/components/LocaleDropdown'
+import { useI18n } from '@/hooks/web/useI18n'
 import { computed, ref } from 'vue'
 import { ElScrollbar } from 'element-plus'
 import { useAppStore } from '@/stores/app'
 
 const appStore = useAppStore()
+
+const { t } = useI18n()
 
 const title = computed(() => appStore.getTitle)
 
@@ -39,9 +43,9 @@ const toLogin = () => {
               enter-active-class="animate__animated animate__bounceInLeft"
             >
               <img src="@/assets/svgs/login-box-bg.svg" key="1" alt="" class="w-350px" />
-              <div class="text-3xl text-white" key="2">欢迎使用本系统</div>
+              <div class="text-3xl text-white" key="2">{{ t('login.welcome') }}</div>
               <div class="mt-5 font-normal text-white text-14px" key="3">
-                开箱即用的中后台管理系统
+                {{ t('login.message') }}
               </div>
             </TransitionGroup>
           </div>
@@ -57,6 +61,7 @@ const toLogin = () => {
 
             <div class="flex justify-end items-center space-x-10px">
               <ThemeSwitch />
+              <LocaleDropdown class="lt-xl:text-white dark:text-white" />
             </div>
           </div>
           <Transition appear enter-active-class="animate__animated animate__bounceInRight">

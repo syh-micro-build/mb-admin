@@ -1,7 +1,8 @@
 <script setup lang="tsx">
 import { reactive, ref, watch, onMounted, unref } from 'vue'
 import { Form, type FormSchema } from '@/components/Form'
-import { ElCheckbox, ElLink } from 'element-plus'
+import { useI18n } from '@/hooks/web/useI18n'
+import { backtopEmits, ElCheckbox, ElLink } from 'element-plus'
 import { useForm } from '@/hooks/web/useForm'
 import { loginApi, getTestRoleApi, getAdminRoleApi } from '@/api/login'
 import { useAppStore } from '@/stores/app'
@@ -13,6 +14,7 @@ import { useValidator } from '@/hooks/web/useValidator'
 import { Icon } from '@/components/Icon'
 import { useUserStore } from '@/stores/user'
 import { BaseButton } from '@/components/Button'
+import { color } from 'echarts'
 
 const { required } = useValidator()
 
@@ -25,6 +27,8 @@ const userStore = useUserStore()
 const permissionStore = usePermissionStore()
 
 const { currentRoute, addRoute, push } = useRouter()
+
+const { t } = useI18n()
 
 const rules = {
   username: [required()],
@@ -40,14 +44,14 @@ const schema = reactive<FormSchema[]>([
     formItemProps: {
       slots: {
         default: () => {
-          return <h2 class="text-2xl font-bold text-center w-[100%]">登录</h2>
+          return <h2 class="text-2xl font-bold text-center w-[100%]">{t('login.login')}</h2>
         }
       }
     }
   },
   {
     field: 'username',
-    label: '用户名',
+    label: t('login.username'),
     // value: 'admin',
     component: 'Input',
     colProps: {
@@ -59,7 +63,7 @@ const schema = reactive<FormSchema[]>([
   },
   {
     field: 'password',
-    label: '密码',
+    label: t('login.password'),
     // value: 'admin',
     component: 'InputPassword',
     colProps: {
@@ -90,9 +94,9 @@ const schema = reactive<FormSchema[]>([
           return (
             <>
               <div class="flex justify-between items-center w-[100%]">
-                <ElCheckbox v-model={remember.value} label="记住我" size="small" />
+                <ElCheckbox v-model={remember.value} label={t('login.remember')} size="small" />
                 <ElLink type="primary" underline={false}>
-                  忘记密码
+                  {t('login.forgetPassword')}
                 </ElLink>
               </div>
             </>
@@ -118,12 +122,12 @@ const schema = reactive<FormSchema[]>([
                   class="w-[100%]"
                   onClick={signIn}
                 >
-                  登录
+                  {t('login.login')}
                 </BaseButton>
               </div>
               <div class="w-[100%] mt-15px">
                 <BaseButton class="w-[100%]" onClick={toRegister}>
-                  注册
+                  {t('login.register')}
                 </BaseButton>
               </div>
             </>
@@ -135,7 +139,7 @@ const schema = reactive<FormSchema[]>([
   {
     field: 'other',
     component: 'Divider',
-    label: '其它登录方式',
+    label: t('login.otherLogin'),
     componentProps: {
       contentPosition: 'center'
     }
