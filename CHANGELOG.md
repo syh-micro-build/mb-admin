@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/syh-micro-build/mb-admin/compare/v1.4.0...v1.5.0) (2025-05-07)
+
+
+### 🔨  其他修改 | Chore
+
+* **release:** 1.4.0 ([b168991](https://github.com/syh-micro-build/mb-admin/commit/b1689917bd7cc7376c5c3a30cea098aceaa7c426))
+
+
+### 🎡  持续集成 | Continuous Integration
+
+* :ferris_wheel: 添加 npm 依赖更新命令 ([5c738f2](https://github.com/syh-micro-build/mb-admin/commit/5c738f2115316a491ab79c27e4e3446fd205e78a))
+* 1、精简开发目录 ([025c9cb](https://github.com/syh-micro-build/mb-admin/commit/025c9cb2a3d528ef62cc6a17297022fa932a83c2))
+* 1、精简开发目录; ([8bd9ee2](https://github.com/syh-micro-build/mb-admin/commit/8bd9ee2f050c21eab7e8a1ab64a2da12e09af099))
+
+
+### ⚡️  性能提升 | Performance Improvements
+
+* :zap: 登录组件添加enter键触发提交,锁屏组件自动聚焦输入框 ([c90fa1a](https://github.com/syh-micro-build/mb-admin/commit/c90fa1a980e96ccddc4cb87a4c5883ffb70e1b7c))
+
+
+### 🐛  修复缺陷 | Bug Fixes
+
+* :bug: 当options为空时无限循环 ([d59a755](https://github.com/syh-micro-build/mb-admin/commit/d59a755c530693adb63d11703192d2a1d4e7d27f))
+* :bug: 修复表格列设置弹窗出现警告问题 ([e3cddc4](https://github.com/syh-micro-build/mb-admin/commit/e3cddc4abc4897d083579cea02fff06913e76a18))
+* :bug: 修复主题switch状态不统一的问题 ([4309dd0](https://github.com/syh-micro-build/mb-admin/commit/4309dd0b3a15cc9cb5c91ae1150688ec395b0b04))
+* :bug: 修复Enter登录重复触发,阻止事件冒泡 ([1acd547](https://github.com/syh-micro-build/mb-admin/commit/1acd547b21269cce22f34a01f6e932be80e421ba))
+* :bug: 修复env更新title后,store不更新 ([8282df1](https://github.com/syh-micro-build/mb-admin/commit/8282df1116fcd1c5eec94fca1b0c2b7735547f52))
+* **ui:** :bug: 角色列表返回的菜单项字段不存在时，点击编辑按钮控制台报错 ([3ec05c6](https://github.com/syh-micro-build/mb-admin/commit/3ec05c6117060bac23ae79f49487eca564964037))
+* **ui:** :bug: 内容字段隐藏应该用hidden，而不是show ([8d305d7](https://github.com/syh-micro-build/mb-admin/commit/8d305d79261e46de6d1db5dc69e5d3eebb90c318))
+* **ui:** :bug: 综合示例-页面 列表中的重要性字段改为显示tag，内容字段隐藏应该用hidden，而不是show ([027f464](https://github.com/syh-micro-build/mb-admin/commit/027f464a3e0c5dbdc0b7ae88118771bafae0be5c))
+
+
+### ✨  新增功能 | New Feature
+
+* :sparkles: 添加 Hash 路由模式 ([2083db6](https://github.com/syh-micro-build/mb-admin/commit/2083db6e81fcbf736e50102634c446d297b33d06))
+* :sparkles: 添加国际化能力 ([6d1f179](https://github.com/syh-micro-build/mb-admin/commit/6d1f17946a9500453ec9c5bf67921eb78fd54625))
+
 ## [1.4.0](https://github.com/syh-micro-build/mb-admin/compare/v1.3.1...v1.4.0) (2024-12-13)
 
 
